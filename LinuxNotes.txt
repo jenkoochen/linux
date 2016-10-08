@@ -1,0 +1,988 @@
+/usr = Unix Shared Resources 
+ln (-P) 硬链接 i节点和原文件一致。原文件删除，硬链接还在。硬链接不能跨分区。软链接可以。硬链接不可以针对目录设置。
+ln -s (-f 强制覆盖)。可以针对目录设置，可以跨分区。i节点和原文件不同。文件权限一定是rwxrwxrwx
+删除一个文件的前提是对文件的所在目录有写权限。
+
+                 文件                目录
+r 读权限     可以查看文件        可以列出文件目录内容
+w 写权限     可以修改文件内容    可以删除、创建 文件
+x 执行权限   可以执行文件        可以进入目录
+
+只有文件所有者和root可以改变文件的权限，只有root可以改变文件的所有者
+
+umask -S 创建文件目录的默认权限，如果是文件，无执行权限，Linux下新建文件，默认均无执行权限。
+umask （0022） 0 022对应的755 
+mkdir -p 创建递归创建目录
+rmdir 删除空目录
+
+find /etc -name inti      精确搜索文件名为inti的文件
+find /etc -name *inti*    将含有文件名中含有inti的文件
+find /etc -name inti*     查找所有文件名以inti开头的文件
+find /etc -name inti???   查找文件名以inti开头后面还有三位字符的文件
+find /etc -iname inti     不区分大小写
+find /etc -size +10       搜查文件大小大于10个数据块的文件（10*512B=5k）
+find /etc -user shenchao  搜索用户为shengchao的文件
+find /etc -group root         属组
+find /ect -amin -5         5分钟内被访问的文件
+find /etc -cmin -5         5分钟内文件属性被改
+find /etc -mmin +5         5分钟前修改过文件内容
+find /etc -size +17777 -a -size -204800  -a表示同时满足  -o表示有一个满足
+find /etc -name inittab -exec ls -l{} \;   -exec/-ok …… {} \;对搜索结果进行操作，ok会询问  {} 和\ 之间必须有空格
+find /etc -type f                            f 文件，d目录，l软连接
+find . -inum 31531 -exec rm {}\;  删除i节点为31531的文件
+
+locate 在tmp 目录内的文件是收不到的   
+updatedb 
+locate -i 不区分大小写
+
+which搜索命令所在位置,及命令别名
+
+who 查看登录的用户，tty表示本地登录，pts表示远程终端
+
+uptime                                     （1分钟 5分钟 15分钟）
+19:59:18 up  6:06,  3 users,  load average: 0.08, 0.02, 0.01
+
+w  
+ 19:56:20 up  6:03,  3 users,  load average: 0.00, 0.00, 0.00
+                                          （空闲时间 累计占用时间     当前操作时间）
+USER     TTY      FROM              LOGIN@   IDLE    JCPU             PCPU WHAT
+gavin    tty1     -                19:51    2:33     0.04s            0.04s -bash
+root     pts/0    192.168.1.102    13:53    5:41m    0.17s            0.00s tail -f /var/log/messages
+root     pts/1    192.168.1.103    18:59    0.00s    0.02s            0.00s w
+
+
+rm =“rm -i”
+
+whereis 还可以搜出帮助命令所在位置
+
+grep chenzhengkuo  /etc/passwd
+grep -i 不区分大小写
+grep -v 排除关键字的行
+
+grep -v ^# /ect/httpd/conf/httpd.conf 
+
+man ls  man查看帮助信息   默认优先查看命令的帮助。 1 表示命令的帮助，5 表示配置文件的帮助
+man 5 passwd    查看配置文件的帮助
+whatis ls（命令）   查看命令信息
+apropos password(配置文件) 查看配置文件的信息
+info 和man类似
+help ls（命令） 查询帮助信息
+
+gzip不能压缩目录,只能压缩文件，且不保留原文件
+gzip zhengshuang 
+gunzip zhengshuang.gz
+gzip -d zhengshuang.gz
+
+
+bzip2 压缩比惊人
+bzip2 -k zhengshuang  保留原文件
+bunzip2 zhengshuang.bz2 
+
+zip Windows 和 Linux 都支持，可压缩文件夹、文件，可以保留文件
+zip zhengshuang.zip zhengshuang
+unzip zhengshuang.zip
+zip -r jingtian    压缩目录
+unzip  jingtian
+
+tar -zvf jingtian.gz jingtian
+    -c  打包
+    -v  显示详细信息
+    -f  指定文件名
+    -z  打包的同时压缩/解压缩
+    -j  打包/解压 bz2
+    -x  解包
+
+tar -xzvf jingtian.gz 
+Linux压缩包，Windows的压缩软件一般都支持
+
+write gavin  （Ctrl + D 发送） 发给在线用户
+wall  （Ctrl + D 发送）        发给所有人        
+
+
+回还网卡
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:99 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:99 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:8714 (8.5 KiB)  TX bytes:8714 (8.5 KiB)
+
+mail 
+   help      帮助
+   h         列表
+   序列号    查看
+   d  序列号 删除
+   q         退出
+
+
+last 查看当前或之前用户的登录信息
+lastlog  查看每位用户最后登录
+lastlog -u 502 只查找某个用户
+
+traceroute www.sina.com
+
+netstat 查看网络相关信息
+        -u udp 协议
+	-t tcp 协议
+        -l 监听
+	-r 路由
+	-n 显示ip和port
+        -tlun 查看本机监听的端口
+	-an 查看本机所有网络连接
+	-rn 查看本机路由
+
+
+netstat -tlun
+Active Internet connections (only servers)
+（    Recv-Q接收数据包队列，0表示网络通畅无积压 ）
+Proto Recv-Q Send-Q Local Address               Foreign Address             State      
+tcp        0      0 0.0.0.0:60050               0.0.0.0:*                   LISTEN          
+udp        0      0 0.0.0.0:111                 0.0.0.0:*                               
+udp        0      0 0.0.0.0:755                 0.0.0.0:*                               
+udp        0      0 0.0.0.0:631                 0.0.0.0:*                               
+udp        0      0 0.0.0.0:46339               0.0.0.0:*                               
+udp        0      0 127.0.0.1:782               0.0.0.0:*       
+
+      文件系统 卷标 特殊选项
+mount -[t]     [-L]  [-o]     设备文件名   挂载点             //挂载命令
+mount -t ios9660 /dev/sr0 /mnt/cdrom
+mount -o remount,noexec /home                                 //将home分区重新挂载并令其不支持执行文件
+umount /dev/sr0  卸载(跟设备文件名或挂载点都可以)
+
+shutdown [选项] 时间
+         -c 取消前一个关机命令
+	 -h 关机
+         -r 重启
+
+关机命令 halt     poweroff       int 0（不保存正运行的进程，所以不一定安全）
+
+/etc/inittab   init配置文件
+
+runlevel 查看运行级别
+3（之前级别） 5（当前运行级别）
+
+logout 注销用户
+exit   退出控制台
+
+vim 
+a在光标所在字符后插入
+A在光标所在行行尾插入
+i在光标所在字符前插入
+I在光标所在行行首插入
+o在光标下插入新行
+O在光标上插入新行
+:set nu 设置行号
+:set nonu 取消行号
+gg 到第一行
+G  到最后一行
+nG 到n行
+:n 到n行 
+0到行首
+$到行尾
+x删除光标所在位置字符
+nx光标所在行后n个字符
+dd 删除/剪切 光标所在行
+ndd 删除/剪切 光标所在行以下n行
+dG 删除光标所在行到文件末尾内容
+D 删除光标所在处到行尾内容
+:n1,n2d 删除指定范围行
+yy 复制当前行
+nyy 复制当前行以下n行
+p 黏贴在当前行以下
+P 黏贴在当前行以上
+u 取消上一步操作
+r 替换摸个字符
+R 从光标所在处开始替换字符，esc结束
+/string
+?text　　查找text，反向查找，按n健查找下一个，按N健查找前一个。
+:set ic 搜索时忽略大小写:set noic 
+n 下个位置
+:%s/old/new/g
+:n1,n2s/old/new/g
+:n1,n2s/^/#/g 注释:n1,n2s/^#//g  去除注释
+:w 保存
+:w new_filename 另存为
+:wq并退出 
+ZZ 快捷键 保存退出
+:q!
+:wq! 强制保存，只有文件所有者和root可以使用
+:r /etc/issue
+:r !date 导入命令内容
+:ab czk chenzhengkuo@qq.com   在文件中输入czk 空格 会自动替换为chenzhengkuo@qq.com 重 启就消失。
+可写到用户的配置文件中持久保存 vim /root/.vimrc
+w 向前移动一个单词（光标停在单词首部），如果已到行尾，则转至下一行行首。此命令快，可以 代替l命令。b 向后移动一个单词 
+2b 向后移动2个单词
+e，同w，只不过是光标停在单词尾部ge，同b，光标停在单词尾部。^ 移动到本行第一个非空白字符上。
+f（find）命令也可以用于移动，
+fx将找到光标后第一个为x的字符，3fd将找到第三个为d的字符。F 同f，反向查找。
+Ctrl + e 向下滚动一行
+Ctrl + y 向上滚动一行
+Ctrl + d 向下滚动半屏
+Ctrl + u 向上滚动半屏
+Ctrl + f 向下滚动一屏
+Ctrl + b 向上滚动一屏
+
+
+rpm -ivh 
+    -i（install）   安装（包全名）
+    -v（verbose）   显示详细信息
+    -h（hash）      显示进度
+    --nodeps        不检查依赖，一般不用
+    -U（upgrade）   升级（包全名）
+    -e              卸载（包名）
+    -q              查询（包名）
+    -a              查询所有
+    -qi             软件信息
+    -ql             查询安装位置（包名）
+    -qf             查询文件属于哪个rpm包（文件名）
+    -qR             查询依赖
+    -p              查询未安装包信息（包全名）
+    -V              检验rpm包（已安装的包名）
+
+rpm 模块依赖 www.rpmfind.net
+
+rpm2cpio 包全名|cpio -idv .文件绝对路径   -i还原  -d自动新建目录 -v 显示过程
+rpm2cpio /mnt/cdrom/Packages/coreutils-8.4-19.el6.i686.rpm |cpio -idv ./bin/ls
+cp /root/bin/ls /bin/
+
+yum list
+yum search 关键字
+yum -y install 包名
+yum -y update  包名
+yum -y remove  包名
+
+yum grouplist  
+yum groupremove  组名
+yum groupinstall 组名
+
+光盘yum源搭建步骤
+1. 挂载光盘
+mount /dev/cdrom /mnt/cdrom/
+2. 让网络yum源文件失效
+enable = 0 标示yum源失效，yum源默认为开启 
+
+server 可以启动在/etc/init.d/ 下的服务
+/usr/local/src/  存放源码包的位置
+
+/etc/passwd
+/etc/shadow
+/etc/group
+/etc/gshadow
+/etc/skel
+
+date -d "1970-01-01 16066 days" 换算成日期
+echo $(($date --date="2014/01/06"+%s)/86400+1)
+
+useradd -u 手工指定用户UID
+        -d 家目录
+	-c 手工指定用户说明
+	-g 指定初始组
+	-G 指定附件组
+	-s 手工指定用户的登录shell
+
+usermod 选项 用户名   修改已存在的用户
+        -L            锁定用户
+        -U            解锁
+
+/etc/default/useradd  用户默认值文件
+/etc/login.defs      用户默认文件2
+
+passwd 选项 用户名
+       -S 查询用户密码状态，仅root用户可用
+       -l 锁定用户。仅root可用
+       -u 解锁用户，仅root可用
+       --stdin可用用管道符输出的数据作为用户的密码
+echo "123456"|passwd --stdin gavin
+
+chage 选项 用户名    修改用户密码状态
+chage -d 0 gavin     密码归零，让用户登录时强制让其改密
+
+userdel 选项 用户名           删除目录
+        -r                    删除家目录
+手工删除用户
+vim /etc/passwd
+vim /etc/shadow
+vim /etc/group
+vim /etc/gshadow
+rm -fr /var/spool/mail/gavin
+rm -fr /home/gavin
+
+id 用户名
+
+su 选项 用户名
+    -             连带环境一起切换
+    -c            仅执行一次，不切换
+su - root -c "cat /etc/shadow"
+
+whoami  当前用户
+env     查看用户环境变量
+
+groupadd 选项 组名
+         -g            指定gid
+
+groupmod 选项 组名
+	 -g             修改gid
+	 -n             修改组名
+groupmod -n testgrp group1（原组名）
+
+groupdel 组名
+有初始用户 不能删，否则可以删
+
+gpasswd 选项       组名
+        -a 用户名  组名  把用户加入到组里  （附加用户）
+	-d 用户名  组名  把用户从组中删除
+dumpe2fs -h /dev/sda1 |grep "Default mount options" 查看分区ACL权限是否开启
+mount -o remount,acl /
+/etc/fstab  修改配置文件mount -o remount /   生效
+chown root:tgroup /project
+setfacl -m u:st:rx /project/
+setfacl -m g:tgroup:rx /project/
+setfacl -m m:rx       /project/
+mask 权限不影响所有者的权限，会影响所属组的权限和acl权限
+setfacl -x g:tgroup2 /project/ 删除某个组的acl权限
+setfacl -b /project/  删除project的所有acl权限
+setfacl -m u:st:rx -R /project/  递归设置acl权限，-R不能放在后面、只针对目录
+setfacl -m d:u:st:rx  /project/  设置新建的文件的默认acl权限 、针对目录
+
+set UID  对二进制可执行文件拥有执行权限的用户在执行时，临时享有文件的所有者的权限
+chmod 4775 文件名  4为SUID权限 或
+chmod u+s  
+文件名像vim这些命令，不可以赋予SUID权限
+定期扫描系统中的文件的SUID权限 
+set GID 临时获得文件所属组的权限
+针对二进制文件，和SUID类似
+可针对目录（拥有读和执行权限）,普通用户在此目录中创建的文件的属组为此目录的属组
+chmod 2775 /test/
+chmod g+s /test/
+chmod g-s /test/ 取消SGID 或
+chmod 775 /test/
+
+SBIT 只针对目录，普通用户对目录有w和x权限（解决即使是777权限的文件，也只能删除自己的文件，root除外，如/tmp/ 目录）
+chmod 1775 目录名
+chmod o+t
+chmod 775
+chmod o-t
+
+chattr [+/-/=] [选项] 文件或目录，对root有效
+chattr + i /test/
+i：文件，不能删，改名，不能修改内容（只能看 ）
+   目录，不能创建、删除文件，但可修改目录下文件的内容（只能修改目录下文件内容）。
+a：文件，只能增加文件内容，不能删除，也不能修改数据。（只能追加内容）
+   目录，允许创建和修改文件，但不能修改文件名，不能删除文件。（只能创建和修改文件）
+
+lsattr -a abc
+       -a
+       -d
+
+sudo权限
+1.root把把只能超级用户执行的命令赋予普通用户。
+visudo  或 
+vi /etc/sudoers 
+用户 被管理的ip/网段   可用身份  授权命令（绝对路径）
+chen      ALL        = (ALL)     ALL
+chen      ALL        =          /sbin/shutdown/ -r now
+组名
+%wheel    ALL        =（ALL）    ALL               给组赋予sudo权限
+2.普通用户执行。
+
+df [选项] [挂载点]   文件系统查看
+   -a                显示所有的文件系统信息，包括特殊文件系统，如/proc、/sysfs
+   -h                使用习惯单位显示容量，如KB，MB或GB
+   -T                显示文件系统类型
+   -m                以MB为单位显示容量
+   -k                以KB为单位显示容量，默认就是它。
+
+ll -h /         只会统计不包含子目录的大小
+
+du [选项] [目录或文件]
+    -a                   显示每个子文件的磁盘占用量，默认只统计子目录的磁盘占用量
+    -h                   人性化显示
+    -s			 统计总占用量，而不是列出目录和子文件的占用量
+
+df 看到的是被文件、系统、程序占用的空间，看到的剩余空间才是真的空间
+du 仅该更分区文件占的空间
+
+fsck [选项] 分区设备文件名   文件系统修复，系统会自动执行
+      -a                     不用显示用户提升，自动修复文件系统
+      -y                     自动修复。和-a一致，不过有些文件系统只支持-y
+
+dumpe2fs 分区设备文件名
+
+格式文件系统，假设每个数据块为4k，如有一个10k的文件需要占用3个数据块，且最后一块的数据块剩余的2k不能再放东西
+
+fdisk -l 查看分区
+
+mount -t vfat /dev/sdb1 /mnt/usb/       //挂载u盘  
+
+Linux不支持NTFS文件系统
+http://www.tuxera.com/community/open-source-ntfs-3g/   下载后编译安装，支持NTFS
+mount -t ntfs-3g 分区设备文件名 挂载点
+
+fdisk /dev/sdb
+      d 删除一个分区
+      l 显示已知的文件系统类型，82为Linux swap，83为Linux分区
+      m 显示帮助
+      n 新建分区
+      p 显示分区列表
+      q 不保存退出
+      w 保存并退出
+      t 改变一个分区的系统ID
+partprobe
+mkfs -t ext4 /dev/sdb1
+
+mount /dev/sdb1/ /disk1/
+
+自动挂载 既写入/etc/fstab  
+第一字段：分区设备文件名或UUID（硬盘通用唯一识别码）
+第二字段：挂载点
+第三字段: 文件系统名称
+第四字段：挂载参数
+第五字段：指定分区是否被dump备份，0代表 不备份，1代表每天备份，2代表不定期备份
+第六字段：指定分区是否被fsck检测，0代表不检测，其他数字代表优先级，1的优先级比2高
+
+拓展分区，不用挂载。
+配置完后 mount -a 从新挂载（不用重启 ）
+
+如果系统崩溃，修改/etc/fstab 文件（只读不能保存，可以重新挂载一遍mount -o remount,rw /）
+
+rpm安装的独立服务
+/etc/init.d/ :启动脚本位置
+/etc/sysconfig/ :初始环境配置文件位置
+/etc/ :         配置文件位置
+/etc/xinetd.conf   xinetd 配置文件
+/etc/xinetd.d/ :基于xinetd服务的启动脚本
+/var/lib/ :  服务产生的数据放在这里
+/var/log/ : 日志
+
+独立服务的启动：service 服务名称 start|stop|restart|status
+                /etc/init.d 服务名 start|stop|restart|status 
+
+自启动的三种方法：
+1.chkconfig [--level 2345] httpd on
+  chkconfig [--level 2345] httpd off
+  chkconfig [--list]        查询
+
+2.修改/etc/rc.d/rc.local 文件  （建议方式）
+
+3.使用ntsysv命令管理自启动
+
+touch 命令访问已存在文件，会修改文件的最后修改时间
+
+yum -y install xinetd                 安装xinetd 超级守护进程
+yum -y install telnet-server          安装telnet-server
+vim /etc/xinetd.d/telnet 将disable改为no
+service xinetd restart
+chkconfig telnet off 关闭自启动
+基于xinetd的服务启动和自启动为一个概念，二者合一。
+
+让源码包安装的Apache可以被service识别
+ln -s /usr/local/apache2/bin/apachectl /etc/init.d/apache  就可以被service命令识别，即可使用service apache start
+
+让源码包安装的apache可以被chkconfig和ntsysv识别管理
+1. ls /etc/rc.d/rc3.d/      查看服务启动和关闭顺 s为启动顺序，k为关闭顺序
+2.vim /etc/init.d/apache
+       （加入       运行级别 启动顺序 关闭顺序      ）
+	#chkconfig:   35      86        76        （启动顺序和关闭顺序不能和现有的重叠）
+	#description: source package apache      (可以随意写)
+3.chkconfig --add apache 将apache加入chkconfig
+  chkconfig --del apache 将apache从chkconfig删除
+
+ps aux 查看系统中的所有进程，Unix风格
+   a   查看所有前台进程
+   x   查看所有后台进程
+   u   显示哪个用户产生
+ps -le 查看系统中所有进程，Linux风格
+   -l  显示更加详细的信息
+   -e  显示所有进程
+
+
+tty1-tty6 是本地字符终端
+tty7 为本地图形终端
+pts/0-255 代表虚拟终端
+? 代表进程不是由终端调用
+
+进程状态：R运行、S休眠、T停止、s包含子进程、+位于后台
+
+USER  PID     %CPU      %MEN            VSZ            RSS         TTY     STAT     START         TIME              COMMAND
+用户 进程id 占用的cup 物理内存 占用的虚拟内存KB 占用的时间内存KB 运行终端 进程状态 启动时间 占用的cpu运算时间 产生此进程的命令名
+
+top                                              1分钟 5分钟 15分钟
+top - 17:29:16 up  1:14,  1 user,  load average: 0.00, 0.00, 0.00    （单核大于1代表系统压力大，4核大于4压力大，8核大于8压力大）
+Tasks: 105 total,   1 running, 104 sleeping,   0 stopped,   0 zombie（僵尸进程，要关闭还未关闭的进程）
+Cpu(s):  0.1%us,  0.1%sy,   0.0%ni,               99.3%id,  0.5%wa,     0.0%hi,       0.0%si,    0.0%st
+（用户模式占用 系统模式.. 改变过优先级的用户进程.. 空闲率 输入输出.. 硬中断服务请求.. 软中断.... 虚拟时间百分比,有虚拟机时，虚拟cpu等待实际cpu的时间）
+Mem:   1020292k total,   196864k used,   823428k free,    20052k buffers
+（     物理内存总大小    使用了多少      空闲多少          有多少再做缓冲）
+Swap:  4128764k total,        0k used,  4128764k free,    74464k cached
+（     总大小               使用了多少  空闲多少          作为缓存的交互分区的大小）
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND
+ 1701 root      20   0 15032 1104  828 R  2.0  0.1   0:00.01 top
+    1 root      20   0 19356 1512 1212 S  0.0  0.1   0:00.46 init
+    2 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kthreadd
+
+pstree [选项]        查看进程树
+       -p            显示进程的pid
+       -u            显示进程的所属用户
+
+kill [-1/-9/-15] pid  默认为-15
+      -15             正常关闭
+      -9              强制关闭
+      -1              重启
+
+killall [-i/-I] [-1/-9/-15] 进程名
+        -i                  交互式
+        -I                  忽略进程名大小写
+
+pkill [选项][信号] 进程名
+       -t                   按终端号   
+pkill  -t   -9     tty1
+
+tar -zcf etc.tar.gz /etc &  放在后台执行（& 把进程放在后台执行）
+（top） ctrl+z              放在后台暂停（ctrl+z把进程放在后台暂停）
+
+jobs 查看后台工作
+
+fg （%工作号）    恢复到前台，不加工作号，会先将带+号的进程恢复，第二次再把-号进程恢复
+fg %1
+
+bg 工作号     把后台暂停的进程恢复到后台运行（但如果是类似于top这种必须和前台交互的命令，依然是stop状态）
+bg %3
+
+vmstat [刷新延时 刷新次数]  监控系统资源
+vmstat   1        5         每一秒刷新一次，一共刷新5次
+
+dmesg 查看开机信息
+dmesg |grep CPU 可以查看开机cpu信息，和硬件信息
+dmesg |grep eth0
+
+free [-k/-m/-g]
+total       used       free     shared    buffers     cached
+Mem:       1572988    1509260      63728          0      62800     277888              表示物理内存统计
+-/+ buffers/cache:    1168572     404416                                               表示物理内存的缓存统计
+Swap:      2096472      16628    2079844                                               表示硬盘上交换分区的使用情况
+
+cache（缓存） 加速数据读取
+buffer（缓冲）加速数据写入硬盘
+
+cat /proc/cpuinfo 查看cpu信息
+
+uptime top、w命令的第一行
+
+uname [选项] 查看内核信息
+       -a    查看系统所有相关信息
+       -r    查看内核版本
+       -s    查看内核名称，默认
+
+file /bin/ls 判断操作系统位数（如:32位or64位）
+          (这里)
+bin/ls: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, stripped
+
+lsb_release -a 查看系统发行版本
+
+lsof [选项]     列出进程打开或使用的文件信息
+     -c 字符串  只列出以字符串开头的进程打开的文件
+     -u 用户名  只列出某个用户的进程打开的文件
+     -p pid     列出某个PID进程打开的文件  
+
+crontab [选项]   定时任务
+        -e       编辑crontab定时任务
+        -l       查询crontab任务
+        -r       删除当前用户所有的crontab任务    
+
+*          *       *      *       *      任务
+第几分钟 第几小时 几号  第几个月 星期几
+*    所有范围
+,    代表不连续范围 “0 8,12,16 * * * 命令” 代表明天8点0分，12点0分，16点0分执行命令
+-    代表连续的范围 “0 5 * * 1-6 命令” 周一到周六5点0分执行
+*/n  每隔n一次      “*/10 * * * * 命令”每十分钟执行一次   
+
+常见日志:
+/var/log/cron 系统定时任务日志
+/var/log/cups 打印信息日志
+/var/log/dmesg 开机自检日志，可用dmesg命令查看
+/var/log/message 系统重要信息日志。系统出现问题时，首先检查这个文件。
+/var/log/mailog 记录邮件信息
+/var/log/secure 记录验证授权方面的信息，只要涉及账户和密码的程序都会记录。如ssh登录，su切换，sudo授权，添加用户，修改密码都会记录。
+/var/log/wtmp 永久记录所有用户的登录、注销、关机、重启、启动事件。二进制文件，用命令last查看
+/var/log/btmp 记录错误登录日志，                                  二进制文件，用命令lastb查看
+/var/log/lastlog 记录所有用户最后一次的登录时间日志。             二进制文件，用命令lastlog查看
+/var/log/utmp 记录已经登录的用户的信息，随用户注销登录不断变化。  二进制文件，用命令w，who，users查看
+
+日志格式：
+事件发生的事件  发生的事件的服务器的主机名  产生事件的服务名或程序名  事件具体信息
+
+链接符：
+“*”代表若有等级日志
+“.”比后面的等级高的，包含该等级
+“.=”等于后面等级，只记录该等级
+“.!”代表不等于，除了该等级都记录
+
+日志等级：
+debug      一般的调试信息
+info       基本的通知信息
+notice     普通信息，但是有一定的重要性
+warning    警告信息，但是还是不影响服务或系统的运行
+error      错误信息，一般会信息服务系统的运行
+crit       临界状态，比error还严重
+alert      警告状态，比crit还要严重。
+emerg      疼痛等级信息，系统已经无法使用了。
+
+日志记录位置
+文件绝对路径 "/var/log/secure"
+系统设备文件名，如打印机  "/dev/lp0"
+转发给远程主机 "@192.168.0.210:514"
+用户名，如“root”，前提要是该用户要在线，否则想到与丢弃
+忽略或丢弃日志，如“~”
+
+vim /etc/rsyslog.conf 
+
+如果没有dateext参数，第一次轮替时secure会变成secure.1,新建的为secure，当第二次轮替secure1，变成secure2，secure变成secure1，新建的为secure
+有dateext参数时，加上日期
+
+logrotate 配置文件
+daily 日志的轮替周期是每天
+weekly 日志轮替的周期是每周
+monthly 日志轮替的周期是每月
+compress 日志轮替时，旧的日志进行压缩
+rotate 数字 保留的日志文件的个数。0指没有备份
+create mode owner group 建立新日志，同时指定新日志的权限与所有者和所属组。如create 0600 root utmp
+mail address 在日志轮替时，输出的内容通过邮件发送到指定的地址。
+missingok 如果日志不存在，则忽略该日志的警告信息
+notifempty 如果日志为空文件，则不进行日志轮替
+minszie 大小 日志轮替的最小值。也就是日志一定要到达这个最小值才会轮替，否则就算到时间也不轮替
+size 大小 日志只有大于指定大小才进行日志轮替，而不是按照时间轮替。如size 100k
+dateext 使用日期作为日志轮替的后缀，如secure-20130605
+
+logrotate [选项] 配置文件名
+          -v               显示日志轮替详情
+          -f               强制进行日志轮替，不管日志轮替条件是否已经符合，强制对配置文件中的说有日志进行轮替
+
+Linux 运行级别2，3少了一个NFS服务
+NFS:Network File System 即网络文件系统，是FreeBSD支持的文件系统中的一种，它允许网络中的计算机之间通过TCP/IP网络共享资源。在NFS的应用中，
+    本地NFS的客户端应用可以透明地读写位于远端NFS服务器上的文件，就像访问本地文件一样。
+
+CMOS:Complementary Metal Oxide Semiconductor,互补金属氧化物半导体。
+
+BIOS:Basic Input Output System,它是一组固化到计算机内主板上一个ROM芯片上的程序，它保存着计算机最重要的基本输入输出的程序、开机后自检程序和系统自启动程序，
+     它可从CMOS中读写系统设置的具体信息。 其主要功能是为计算机提供最底层的、最直接的硬件设置和控制。
+
+MBR:主引导记录(Master Boot Record),其中保存着启动引导程序（GRUB）。
+
+Linux启动流程：
+
+    加载    加载                     调用其他分区的启动扇区的启动引导程序（及加载boot分区）
+BIOS---->MBR----->MBR中的启动引导程序----------------------------------------------------->加载内核
+
+                （不能直接加载/lib）搜索                                                               
+----->内核解压自检---------------------->找到initramfs（在boot分区中）-->建立防真根目录-->加载驱动-->
+
+                  调用            调用                    调用(/etc/rc.d/rc.sysinit进行系统初始化)                
+挂载真正系统根目录---->/sbin/init------>/etc/init/rcS.conf---------------------------------------->
+
+           传入运行级别                   调用               按照运行级别调用                                                  
+/etc/inttab------------>/etc/init/rc.conf------->/etc/rc.d/rc---------------->/etc/rc[0-6].d-->
+
+                        启动和关闭                                      输入用户名和密码
+按照优先级启动和关闭脚本---------->/ect/rc.d/rc.local中的程序-->登录界面---------------->进入系统！
+
+windows和Linux并存时应该先装window后装Linux，因为windows的grub会覆盖Linux的grub导致Linux不能启动，Linux可以识别windows的grub，会将其加到自己的grub中。
+
+修改主机名hostname   vim /etc/sysconfig/network
+修改登录欢迎语       vim /etc/motd
+
+shell  即命令解释器（外层应用程序--shell命令解释器--内核--硬件）(解释型语言，可以直接调用Linux系统命令)
+shell 分类
+Bourne Shell，主文件名为sh
+C Shell ,主要用BSD版本的Unix系统中，语法和C语言类似。
+我们说的Linux中的shell为Bourne Shell 中的Bash（Bash与sh兼容）
+
+cat /etc/shells  查看系统支持的shell
+可以通过 sh/bash/tcsh/csh   进行切换
+ 
+echo [选项] [输出的内容]                        输出命令
+     -e                                         支持反斜线控制的字符转换
+
+\t      制表符
+\n      换行符
+\0      八进制
+\x      十六进制
+\e      颜色输出                                echo -e "\e[1;31m abcd \e[0m"
+
+cat -A           查看所有字符,包括换行的表示符
+
+用户家目录/.bash_history                        历史命令保存目录
+history [选项] [历史命令保存文件]
+        -c                           清空历史命令
+        -w                           把缓存的历史命令写入历史命令保存文件
+
+/etc/profile         环境变量配置文件（可以修改历史命令保存的个数）
+
+!n 重复执行第n条命令
+!! 重复执行上一条命令
+!字串 执行上一条以‘字符串’开头的命令
+
+alias 个命令起别名
+alias 别名="原命令"
+
+命令执行顺序：
+1.绝对路径
+2.别名
+3.Bash的内部命令
+4.通过$path 找到的外部命令
+
+让别名永久生效
+vi /家目录/.bashrc
+
+Bash 常用快捷键
+Ctrl + A 光标移到开头
+Ctrl + E 光标移到结尾
+Ctrl + C 强制终止当前命令
+Ctrl + L 清屏
+Ctrl + U 删除/剪切光标之前的内容
+Ctrl + K 删除/剪切光标之后的内容
+Ctrl + Y 黏贴
+Ctrl + R 搜索
+Ctrl + D 退出当前终端
+Ctrl + Z 暂停，并放入后台。
+Ctrl + S 暂停屏幕输出
+Ctrl + Q 恢复屏幕输出
+
+设备    设备文件名     文件描述符        类型
+键盘    /dev/stdin     0                 标准输入
+显示器  /dev/stdout    1                 标准输出
+显示器  /dev/stderr    2                 标准错误输出
+
+输出重定向
+标准输出重定向            命令  > 文件        ( >覆盖 >>追加）
+标准错误输出重定向    错误命令 2> 文件
+同时保存              命令 > 文件 2>&1
+                      命令 &> 文件
+                      命令 >> 文件1 2 >> 文件2   正确追加到文件1，错误追加到文件2
+ls &>/dev/null        丢弃输出
+
+wc [选项] [文件名]
+   -c                 统计字符
+   -w                 统计单词数
+   -l                 统计行数
+
+wc </etc/passwd
+
+多命令顺序执行
+执行符             格式                        作用
+;                  命令1;命令2                 无逻辑关系
+&&                 命令1&&命令2                当命令1正确执行才执行命令2
+||                 命令1||命令2                当命令1错误执行时才执行命令2
+
+grep [选项] "搜索内容" 文件名 
+     -i                           忽略大小写
+     -n                           显示行号
+     -v                           反向查找
+     --color=auto                 搜索出的关键字用颜色显示
+
+通配符
+?       匹配一个任意字符
+*       0个或任意个任意字符
+[]      []中的任意一个字符
+[-]     范围如a-z
+[^]     匹配不是...(取反)
+
+Bash 中其他特殊字符号
+''   之中的特殊符号无特殊含义
+""   特殊符号有特殊意义
+``   反引号和 $(命令) 类似 先执行命令
+$()  先执行括号内的命令
+#    #开头的行代表注释
+$    用于调用变量的值
+\    转义符
+
+
+变量定义规则
+可以由字母、数字和下划线组成，不能以数字开头。
+在Bash中，变量的默认类型都是字符串类型，如果要进行数值运算，则必须指定变量的类型为数值
+变量用等号链接，等号左右两侧不能有空格
+变量的值如果有空格，需要用""或''
+在变量的值中，可以使用"\"转义
+如果需要增加变量的值，那么可以进行变量值得叠加。不过变量需要用双引号包含"$变量名"或用${变量名}包含  aa=$(aa)789或aa="$aa"456
+如果是把命令的结果作为变量赋值予变量，则需要使用`` 或 $()
+环境变量名建议大写，便于区分。
+
+变量分类
+1.用户自定义变量
+2.环境变量
+3.位置参数变量    不能自定义
+4.预定义变量      Bash中已经定义好的。变量不能自定义，变量的作用也是固定的。
+
+set 查看所有变量
+unset 变量名称    删除变量
+
+设置环境变量
+export 变量名=变量值   申明环境变量
+env                    查看环境变量
+
+PATH
+PS1
+
+位置参数
+$n  ($0代表命令本身，$1第一个参数，$2第二个参数) （n=0-9)
+$* 所有参数,把所有参数当初一个整体
+$@ 所有参数,把每个参数都区别对待
+$# 代表命令行中所有的参数的个数
+
+预定义变量
+$? 接收和判断上一条命令是否正确执行 $?==0上一条命令正确执行，$?!=0上一条命令未正确执行
+$$ 当前进程的PID
+$! 后台运行的最后一个进程的PID
+
+接收键盘输入
+read [选项]           [变量名]
+     -p "提示信息"
+     -t 秒数                     设定等待时间
+     -n 字符数                   接收到指定的字符数，就会执行
+     -s                          隐藏输入的数据，适用于机密信息输入
+#!/bin/bash
+#chen
+read -t 30 -p "please input you name:" name
+echo "Name is $name"
+read -s -t 30 -p "please input you age:" age
+echo -e "\n"
+echo "Age is $age"
+read -n 1 -t 30 -p "please select your gender[M/F]:"gender
+echo -e "\n"
+echo "Sex is $gender"
+
+declare 声明变量类型
+declare [+/-]   [选项] 变量名
+        +                       给变量设定类型属性
+        -                       取消变量的类型属性 （特殊）
+		 -i             将变量设置为整形
+                 -x             将变量声明为环境变量
+                 -p             显示指定变量的被声明的类型
+
+cut -f 1 -d : /etc/passwd
+    -b    以字节区分
+    -c    以字符区分
+    -f    以字段区分
+
+
+printf
+awk
+sed
+
+sort -t ":" -k 3,3 /etc/password     用第三个字段排序
+
+
+
+在浏览器地址栏输入一个URL后回车，将会发生的事情？
+http://blog.csdn.net/libin_1/article/details/50778993
+1、浏览器的url请求
+1+、查询本地host文件
+2、递归寻找DNS服务器
+3、连接目标IP并建立TCP连接
+4、向目标服务器发送http请求
+5、web服务器接收请求后处理
+6、web服务器返回相应的结果【无效、重定向、正确页面等】
+7、浏览器接收返回的http内容
+================================前端解析分割线===========================================
+8、开始解析html文件，当然是自上而下，先是头部，后是body
+9、当解析到头部css外部链接时，同步去下载，如果遇到外部js链接也是下载【不过js链接不建议放在头部，因为耽误页面第一展现时间】
+10、接着解析body部分，边解析边开始生成对应的DOM树，同时等待css文件下载
+11、一旦css文件下载完毕，那么就同步去用已经生成的DOM节点+CSS去生成渲染树
+12、渲染树一旦有结构模型了，接着就会同步去计算渲染树节点的布局位置
+13、一旦计算出来渲染的坐标后，又同步去开始渲染
+14、10-13步进行过程中如果遇到图片则跳过去渲染下面内容，等待图片下载成功后会返回来在渲染原来图片的位置
+15、同14步，如果渲染过程中出现js代码调整DOM树机构的情况，也会再次重新来过，从修改DOM那步开始
+16、最终所有节点和资源都会渲染完成
+=========================================分析结束分割线==============================================
+17、渲染完成后开始page的onload事件
+18、整个页面load完成
+
+http协议
+请求头：
+Accept:               [表示客户端可以接受的数据类型]
+Referer               [表示我从哪里来]
+Accept-Language:      [页面语言]
+User-Agent:           [告诉服务器我的浏览器的内核，操作系统]
+Accept-Encoding:      [表示接受什么样的数据压缩格式]
+Host:                 [主机]
+Connection:Keep-Alive [表示长链接，不要立马断开请求]
+
+响应头:
+HTTP
+Server
+Date:                 [资源更新时间]
+Expires:-1            [禁用cache]
+Pragma:no-cache
+Cache-Control:no-cache
+
+文件：
+  文件类型： 
+    文本文件:txt
+    二进制文件:视频、音频、图片
+
+在php中
+final class 不能被继承
+final function 不能被重写
+final 不能修身成员属性
+const aa = 123; const 定义一个常量必须赋初值。不需要加public、private、protected 修饰符。在成员属性时，和静态属性一样，是属于类。
+在内部可以用self::  或类名:: 来访问
+在外部只能用 类名::  
+不能用$this->  访问。
+
+php异常处理
+set_error_handler
+error_function()
+
+function my_error($errno,$errme){
+	echo "错误信息".$errme;
+	exit();
+}
+set_error_handler("my_error",E_WARNING);
+
+错误触发trigger_error(error_msg,E_USER_WARNING);
+E_ERROR
+E_WARNING
+E_NOTICE
+E_ALL
+E_USER_ERROR
+E_USER_WARNING
+E_USER_NOTICE
+
+error_log
+此函数会送出错误信息到 Web 服务器的错误 log 文件，TCP Port，或到指定文件。
+第一个参数 message 即为要送出的错误信息。
+第二个参数 message_type 为整数值：
+       0 表示送到操作系统的 log (UNIX 在 syslog、Windows NT 记录到事件记录)；
+       1 则使用 PHP 的 Mail() 函数，送信息到某 E-Mail 处，第四个参数 extra_headers 亦会用到；
+       2 则将错误信息送到 TCP 埠，此时第三个参数 destination 表示目的地 IP 及 Port；
+       3 则将信息存到文件 destination 中
+if (!Ora_Logon($username, $password)) {
+  error_log("Oracle 数据库不可用!", 0);
+}
+if (!($foo = allocate_new_foo()) {
+  error_log("出现大麻烦了!", 1, "webmaster@www.mydomain.com.tw");
+}
+error_log("搞砸了!", 2, "127.0.0.1:7000");
+error_log("搞砸了!", 2, "loghost");
+error_log("搞砸了!", 3, "/var/tmp/my-errors.log");
+
+try{
+
+}catch(Exception $e){
+	echo $e->getMessage().$e->getLine();
+}
+
+抛出异常之后，try中下面的代码不会执行。直接去找catch。没有异常时，则不执行catch块。捕获的异常，可以再抛出，抛出的异常必须捕获,或定义一个顶级处理器
+set_exception_handler();
+
+自定义异常类
+class Exception1 extends Exception{
+}
+
+try{
+}catch(Exception1){
+}catch(Exception2){
+}
+
+<br/>网页行
+\n 文件换行
