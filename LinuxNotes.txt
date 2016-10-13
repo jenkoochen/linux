@@ -1,105 +1,120 @@
+hostonly ¿¿VMware Network Adapter VMnet1        ¿¿¿¿¿
+nat      ¿¿VMware Network Adapter VMnet8
+nat¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿     ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+
 /usr = Unix Shared Resources 
-ln (-P) Ó²Á´½Ó i½ÚµãºÍÔ­ÎÄ¼þÒ»ÖÂ¡£Ô­ÎÄ¼þÉ¾³ý£¬Ó²Á´½Ó»¹ÔÚ¡£Ó²Á´½Ó²»ÄÜ¿ç·ÖÇø¡£ÈíÁ´½Ó¿ÉÒÔ¡£Ó²Á´½Ó²»¿ÉÒÔÕë¶ÔÄ¿Â¼ÉèÖÃ¡£
-ln -s (-f Ç¿ÖÆ¸²¸Ç)¡£¿ÉÒÔÕë¶ÔÄ¿Â¼ÉèÖÃ£¬¿ÉÒÔ¿ç·ÖÇø¡£i½ÚµãºÍÔ­ÎÄ¼þ²»Í¬¡£ÎÄ¼þÈ¨ÏÞÒ»¶¨ÊÇrwxrwxrwx
-É¾³ýÒ»¸öÎÄ¼þµÄÇ°ÌáÊÇ¶ÔÎÄ¼þµÄËùÔÚÄ¿Â¼ÓÐÐ´È¨ÏÞ¡£
+ln (-P) ¿¿¿
+i¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+ln -s (-f
+¿¿¿¿)¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿i¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿rwxrwxrwx
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-                 ÎÄ¼þ                Ä¿Â¼
-r ¶ÁÈ¨ÏÞ     ¿ÉÒÔ²é¿´ÎÄ¼þ        ¿ÉÒÔÁÐ³öÎÄ¼þÄ¿Â¼ÄÚÈÝ
-w Ð´È¨ÏÞ     ¿ÉÒÔÐÞ¸ÄÎÄ¼þÄÚÈÝ    ¿ÉÒÔÉ¾³ý¡¢´´½¨ ÎÄ¼þ
-x Ö´ÐÐÈ¨ÏÞ   ¿ÉÒÔÖ´ÐÐÎÄ¼þ        ¿ÉÒÔ½øÈëÄ¿Â¼
+                 ¿¿                ¿¿
+r ¿¿¿     ¿¿¿¿¿¿        ¿¿¿¿¿¿¿¿¿¿
+w ¿¿¿     ¿¿¿¿¿¿¿¿    ¿¿¿¿¿¿¿ ¿¿
+x ¿¿¿¿   ¿¿¿¿¿¿        ¿¿¿¿¿¿
 
-Ö»ÓÐÎÄ¼þËùÓÐÕßºÍroot¿ÉÒÔ¸Ä±äÎÄ¼þµÄÈ¨ÏÞ£¬Ö»ÓÐroot¿ÉÒÔ¸Ä±äÎÄ¼þµÄËùÓÐÕß
+¿¿¿¿¿¿¿¿root¿¿¿¿¿¿¿¿¿¿¿¿root¿¿¿¿¿¿¿¿¿¿
 
-umask -S ´´½¨ÎÄ¼þÄ¿Â¼µÄÄ¬ÈÏÈ¨ÏÞ£¬Èç¹ûÊÇÎÄ¼þ£¬ÎÞÖ´ÐÐÈ¨ÏÞ£¬LinuxÏÂÐÂ½¨ÎÄ¼þ£¬Ä¬ÈÏ¾ùÎÞÖ´ÐÐÈ¨ÏÞ¡£
-umask £¨0022£© 0 022¶ÔÓ¦µÄ755 
-mkdir -p ´´½¨µÝ¹é´´½¨Ä¿Â¼
-rmdir É¾³ý¿ÕÄ¿Â¼
+umask -S
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿Linux¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+umask ¿0022¿ 0 022¿¿¿755 
+mkdir -p ¿¿¿¿¿¿¿¿
+rmdir ¿¿¿¿¿
 
-find /etc -name inti      ¾«È·ËÑË÷ÎÄ¼þÃûÎªintiµÄÎÄ¼þ
-find /etc -name *inti*    ½«º¬ÓÐÎÄ¼þÃûÖÐº¬ÓÐintiµÄÎÄ¼þ
-find /etc -name inti*     ²éÕÒËùÓÐÎÄ¼þÃûÒÔinti¿ªÍ·µÄÎÄ¼þ
-find /etc -name inti???   ²éÕÒÎÄ¼þÃûÒÔinti¿ªÍ·ºóÃæ»¹ÓÐÈýÎ»×Ö·ûµÄÎÄ¼þ
-find /etc -iname inti     ²»Çø·Ö´óÐ¡Ð´
-find /etc -size +10       ËÑ²éÎÄ¼þ´óÐ¡´óÓÚ10¸öÊý¾Ý¿éµÄÎÄ¼þ£¨10*512B=5k£©
-find /etc -user shenchao  ËÑË÷ÓÃ»§ÎªshengchaoµÄÎÄ¼þ
-find /etc -group root         Êô×é
-find /ect -amin -5         5·ÖÖÓÄÚ±»·ÃÎÊµÄÎÄ¼þ
-find /etc -cmin -5         5·ÖÖÓÄÚÎÄ¼þÊôÐÔ±»¸Ä
-find /etc -mmin +5         5·ÖÖÓÇ°ÐÞ¸Ä¹ýÎÄ¼þÄÚÈÝ
-find /etc -size +17777 -a -size -204800  -a±íÊ¾Í¬Ê±Âú×ã  -o±íÊ¾ÓÐÒ»¸öÂú×ã
-find /etc -name inittab -exec ls -l{} \;   -exec/-ok ¡­¡­ {} \;¶ÔËÑË÷½á¹û½øÐÐ²Ù×÷£¬ok»áÑ¯ÎÊ  {} ºÍ\ Ö®¼ä±ØÐëÓÐ¿Õ¸ñ
-find /etc -type f                            f ÎÄ¼þ£¬dÄ¿Â¼£¬lÈíÁ¬½Ó
-find . -inum 31531 -exec rm {}\;  É¾³ýi½ÚµãÎª31531µÄÎÄ¼þ
+find /etc -name inti      ¿¿¿¿¿¿¿¿inti¿¿¿
+find /etc -name *inti*    ¿¿¿¿¿¿¿¿¿inti¿¿¿
+find /etc -name inti*     ¿¿¿¿¿¿¿¿inti¿¿¿¿¿
+find /etc -name inti???   ¿¿¿¿¿¿inti¿¿¿¿¿¿¿¿¿¿¿¿¿
+find /etc -iname inti     ¿¿¿¿¿¿
+find /etc -size +10       ¿¿¿¿¿¿¿¿10¿¿¿¿¿¿¿¿10*512B=5k¿
+find /etc -user shenchao  ¿¿¿¿¿shengchao¿¿¿
+find /etc -group root         ¿¿
+find /ect -amin -5         5¿¿¿¿¿¿¿¿¿
+find /etc -cmin -5         5¿¿¿¿¿¿¿¿¿
+find /etc -mmin +5         5¿¿¿¿¿¿¿¿¿¿
+find /etc -size +17777 -a -size -204800  -a¿¿¿¿¿¿  -o¿¿¿¿¿¿¿
+find /etc -name inittab -exec ls -l{} \;   -exec/-ok ¿¿ {}
+\;¿¿¿¿¿¿¿¿¿¿ok¿¿¿  {} ¿\ ¿¿¿¿¿¿¿
+find /etc -type f                            f ¿¿¿d¿¿¿l¿¿¿
+find . -inum 31531 -exec rm {}\;  ¿¿i¿¿¿31531¿¿¿
 
-locate ÔÚtmp Ä¿Â¼ÄÚµÄÎÄ¼þÊÇÊÕ²»µ½µÄ   
+locate ¿tmp ¿¿¿¿¿¿¿¿¿¿¿   
 updatedb 
-locate -i ²»Çø·Ö´óÐ¡Ð´
+locate -i ¿¿¿¿¿¿
 
-whichËÑË÷ÃüÁîËùÔÚÎ»ÖÃ,¼°ÃüÁî±ðÃû
+which¿¿¿¿¿¿¿¿,¿¿¿¿¿
 
-who ²é¿´µÇÂ¼µÄÓÃ»§£¬tty±íÊ¾±¾µØµÇÂ¼£¬pts±íÊ¾Ô¶³ÌÖÕ¶Ë
+who ¿¿¿¿¿¿¿¿tty¿¿¿¿¿¿¿pts¿¿¿¿¿¿
 
-uptime                                     £¨1·ÖÖÓ 5·ÖÖÓ 15·ÖÖÓ£©
+uptime                                     ¿1¿¿ 5¿¿ 15¿¿¿
 19:59:18 up  6:06,  3 users,  load average: 0.08, 0.02, 0.01
 
 w  
  19:56:20 up  6:03,  3 users,  load average: 0.00, 0.00, 0.00
-                                          £¨¿ÕÏÐÊ±¼ä ÀÛ¼ÆÕ¼ÓÃÊ±¼ä     µ±Ç°²Ù×÷Ê±¼ä£©
-USER     TTY      FROM              LOGIN@   IDLE    JCPU             PCPU WHAT
-gavin    tty1     -                19:51    2:33     0.04s            0.04s -bash
-root     pts/0    192.168.1.102    13:53    5:41m    0.17s            0.00s tail -f /var/log/messages
+                                          ¿¿¿¿¿ ¿¿¿¿¿¿
+¿¿¿¿¿¿¿
+USER     TTY      FROM              LOGIN@   IDLE    JCPU             PCPU
+WHAT
+gavin    tty1     -                19:51    2:33     0.04s            0.04s
+-bash
+root     pts/0    192.168.1.102    13:53    5:41m    0.17s            0.00s
+tail -f /var/log/messages
 root     pts/1    192.168.1.103    18:59    0.00s    0.02s            0.00s w
 
 
-rm =¡°rm -i¡±
+rm =¿rm -i¿
 
-whereis »¹¿ÉÒÔËÑ³ö°ïÖúÃüÁîËùÔÚÎ»ÖÃ
+whereis ¿¿¿¿¿¿¿¿¿¿¿¿¿
 
 grep chenzhengkuo  /etc/passwd
-grep -i ²»Çø·Ö´óÐ¡Ð´
-grep -v ÅÅ³ý¹Ø¼ü×ÖµÄÐÐ
+grep -i ¿¿¿¿¿¿
+grep -v ¿¿¿¿¿¿¿
 
 grep -v ^# /ect/httpd/conf/httpd.conf 
 
-man ls  man²é¿´°ïÖúÐÅÏ¢   Ä¬ÈÏÓÅÏÈ²é¿´ÃüÁîµÄ°ïÖú¡£ 1 ±íÊ¾ÃüÁîµÄ°ïÖú£¬5 ±íÊ¾ÅäÖÃÎÄ¼þµÄ°ïÖú
-man 5 passwd    ²é¿´ÅäÖÃÎÄ¼þµÄ°ïÖú
-whatis ls£¨ÃüÁî£©   ²é¿´ÃüÁîÐÅÏ¢
-apropos password(ÅäÖÃÎÄ¼þ) ²é¿´ÅäÖÃÎÄ¼þµÄÐÅÏ¢
-info ºÍmanÀàËÆ
-help ls£¨ÃüÁî£© ²éÑ¯°ïÖúÐÅÏ¢
+man ls  man¿¿¿¿¿¿   ¿¿¿¿¿¿¿¿¿¿¿¿ 1 ¿¿¿¿¿¿¿¿5
+¿¿¿¿¿¿¿¿¿
+man 5 passwd    ¿¿¿¿¿¿¿¿¿
+whatis ls¿¿¿¿   ¿¿¿¿¿¿
+apropos password(¿¿¿¿) ¿¿¿¿¿¿¿¿¿
+info ¿man¿¿
+help ls¿¿¿¿ ¿¿¿¿¿¿
 
-gzip²»ÄÜÑ¹ËõÄ¿Â¼,Ö»ÄÜÑ¹ËõÎÄ¼þ£¬ÇÒ²»±£ÁôÔ­ÎÄ¼þ
+gzip¿¿¿¿¿¿,¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 gzip zhengshuang 
 gunzip zhengshuang.gz
 gzip -d zhengshuang.gz
 
 
-bzip2 Ñ¹Ëõ±È¾ªÈË
-bzip2 -k zhengshuang  ±£ÁôÔ­ÎÄ¼þ
+bzip2 ¿¿¿¿¿
+bzip2 -k zhengshuang  ¿¿¿¿¿
 bunzip2 zhengshuang.bz2 
 
-zip Windows ºÍ Linux ¶¼Ö§³Ö£¬¿ÉÑ¹ËõÎÄ¼þ¼Ð¡¢ÎÄ¼þ£¬¿ÉÒÔ±£ÁôÎÄ¼þ
+zip Windows ¿ Linux ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 zip zhengshuang.zip zhengshuang
 unzip zhengshuang.zip
-zip -r jingtian    Ñ¹ËõÄ¿Â¼
+zip -r jingtian    ¿¿¿¿
 unzip  jingtian
 
 tar -zvf jingtian.gz jingtian
-    -c  ´ò°ü
-    -v  ÏÔÊ¾ÏêÏ¸ÐÅÏ¢
-    -f  Ö¸¶¨ÎÄ¼þÃû
-    -z  ´ò°üµÄÍ¬Ê±Ñ¹Ëõ/½âÑ¹Ëõ
-    -j  ´ò°ü/½âÑ¹ bz2
-    -x  ½â°ü
+    -c  ¿¿
+    -v  ¿¿¿¿¿¿
+    -f  ¿¿¿¿¿
+    -z  ¿¿¿¿¿¿¿/¿¿¿
+    -j  ¿¿/¿¿ bz2
+    -x  ¿¿
 
 tar -xzvf jingtian.gz 
-LinuxÑ¹Ëõ°ü£¬WindowsµÄÑ¹ËõÈí¼þÒ»°ã¶¼Ö§³Ö
+Linux¿¿¿¿Windows¿¿¿¿¿¿¿¿¿¿
 
-write gavin  £¨Ctrl + D ·¢ËÍ£© ·¢¸øÔÚÏßÓÃ»§
-wall  £¨Ctrl + D ·¢ËÍ£©        ·¢¸øËùÓÐÈË        
+write gavin  ¿Ctrl + D ¿¿¿ ¿¿¿¿¿¿
+wall  ¿Ctrl + D ¿¿¿        ¿¿¿¿¿        
 
 
-»Ø»¹Íø¿¨
+¿¿¿¿
 lo        Link encap:Local Loopback  
           inet addr:127.0.0.1  Mask:255.0.0.0
           UP LOOPBACK RUNNING  MTU:65536  Metric:1
@@ -109,161 +124,191 @@ lo        Link encap:Local Loopback
           RX bytes:8714 (8.5 KiB)  TX bytes:8714 (8.5 KiB)
 
 mail 
-   help      °ïÖú
-   h         ÁÐ±í
-   ÐòÁÐºÅ    ²é¿´
-   d  ÐòÁÐºÅ É¾³ý
-   q         ÍË³ö
+   help      ¿¿
+   h         ¿¿
+   ¿¿¿    ¿¿
+   d  ¿¿¿ ¿¿
+   q         ¿¿
 
 
-last ²é¿´µ±Ç°»òÖ®Ç°ÓÃ»§µÄµÇÂ¼ÐÅÏ¢
-lastlog  ²é¿´Ã¿Î»ÓÃ»§×îºóµÇÂ¼
-lastlog -u 502 Ö»²éÕÒÄ³¸öÓÃ»§
+last ¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+lastlog  ¿¿¿¿¿¿¿¿¿¿
+lastlog -u 502 ¿¿¿¿¿¿¿
 
 traceroute www.sina.com
 
-netstat ²é¿´ÍøÂçÏà¹ØÐÅÏ¢
-        -u udp Ð­Òé
-	-t tcp Ð­Òé
-        -l ¼àÌý
-	-r Â·ÓÉ
-	-n ÏÔÊ¾ipºÍport
-        -tlun ²é¿´±¾»ú¼àÌýµÄ¶Ë¿Ú
-	-an ²é¿´±¾»úËùÓÐÍøÂçÁ¬½Ó
-	-rn ²é¿´±¾»úÂ·ÓÉ
+netstat ¿¿¿¿¿¿¿¿
+        -u udp ¿¿
+	-t tcp ¿¿
+        -l ¿¿
+	-r ¿¿
+	-n ¿¿ip¿port
+        -tlun ¿¿¿¿¿¿¿¿¿
+	-an ¿¿¿¿¿¿¿¿¿¿
+	-rn ¿¿¿¿¿¿
 
 
 netstat -tlun
 Active Internet connections (only servers)
-£¨    Recv-Q½ÓÊÕÊý¾Ý°ü¶ÓÁÐ£¬0±íÊ¾ÍøÂçÍ¨³©ÎÞ»ýÑ¹ £©
-Proto Recv-Q Send-Q Local Address               Foreign Address             State      
-tcp        0      0 0.0.0.0:60050               0.0.0.0:*                   LISTEN          
+¿    Recv-Q¿¿¿¿¿¿¿¿0¿¿¿¿¿¿¿¿¿ ¿
+Proto Recv-Q Send-Q Local Address               Foreign Address
+State      
+tcp        0      0 0.0.0.0:60050               0.0.0.0:*
+LISTEN          
 udp        0      0 0.0.0.0:111                 0.0.0.0:*                               
 udp        0      0 0.0.0.0:755                 0.0.0.0:*                               
 udp        0      0 0.0.0.0:631                 0.0.0.0:*                               
 udp        0      0 0.0.0.0:46339               0.0.0.0:*                               
 udp        0      0 127.0.0.1:782               0.0.0.0:*       
 
-      ÎÄ¼þÏµÍ³ ¾í±ê ÌØÊâÑ¡Ïî
-mount -[t]     [-L]  [-o]     Éè±¸ÎÄ¼þÃû   ¹ÒÔØµã             //¹ÒÔØÃüÁî
+      ¿¿¿¿ ¿¿ ¿¿¿¿
+mount -[t]     [-L]  [-o]     ¿¿¿¿¿   ¿¿¿             //¿¿¿¿
 mount -t ios9660 /dev/sr0 /mnt/cdrom
-mount -o remount,noexec /home                                 //½«home·ÖÇøÖØÐÂ¹ÒÔØ²¢ÁîÆä²»Ö§³ÖÖ´ÐÐÎÄ¼þ
-umount /dev/sr0  Ð¶ÔØ(¸úÉè±¸ÎÄ¼þÃû»ò¹ÒÔØµã¶¼¿ÉÒÔ)
+mount -o remount,noexec /home
+//¿home¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+umount /dev/sr0  ¿¿(¿¿¿¿¿¿¿¿¿¿¿¿¿)
 
-shutdown [Ñ¡Ïî] Ê±¼ä
-         -c È¡ÏûÇ°Ò»¸ö¹Ø»úÃüÁî
-	 -h ¹Ø»ú
-         -r ÖØÆô
+shutdown [¿¿] ¿¿
+         -c ¿¿¿¿¿¿¿¿¿
+	 -h ¿¿
+         -r ¿¿
 
-¹Ø»úÃüÁî halt     poweroff       int 0£¨²»±£´æÕýÔËÐÐµÄ½ø³Ì£¬ËùÒÔ²»Ò»¶¨°²È«£©
+¿¿¿¿ halt     poweroff       int 0¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-/etc/inittab   initÅäÖÃÎÄ¼þ
+/etc/inittab   init¿¿¿¿
 
-runlevel ²é¿´ÔËÐÐ¼¶±ð
-3£¨Ö®Ç°¼¶±ð£© 5£¨µ±Ç°ÔËÐÐ¼¶±ð£©
+runlevel ¿¿¿¿¿¿
+3¿¿¿¿¿¿ 5¿¿¿¿¿¿¿¿
 
-logout ×¢ÏúÓÃ»§
-exit   ÍË³ö¿ØÖÆÌ¨
+logout ¿¿¿¿
+exit   ¿¿¿¿¿
 
 vim 
-aÔÚ¹â±êËùÔÚ×Ö·ûºó²åÈë
-AÔÚ¹â±êËùÔÚÐÐÐÐÎ²²åÈë
-iÔÚ¹â±êËùÔÚ×Ö·ûÇ°²åÈë
-IÔÚ¹â±êËùÔÚÐÐÐÐÊ×²åÈë
-oÔÚ¹â±êÏÂ²åÈëÐÂÐÐ
-OÔÚ¹â±êÉÏ²åÈëÐÂÐÐ
-:set nu ÉèÖÃÐÐºÅ
-:set nonu È¡ÏûÐÐºÅ
-gg µ½µÚÒ»ÐÐ
-G  µ½×îºóÒ»ÐÐ
-nG µ½nÐÐ
-:n µ½nÐÐ 
-0µ½ÐÐÊ×
-$µ½ÐÐÎ²
-xÉ¾³ý¹â±êËùÔÚÎ»ÖÃ×Ö·û
-nx¹â±êËùÔÚÐÐºón¸ö×Ö·û
-dd É¾³ý/¼ôÇÐ ¹â±êËùÔÚÐÐ
-ndd É¾³ý/¼ôÇÐ ¹â±êËùÔÚÐÐÒÔÏÂnÐÐ
-dG É¾³ý¹â±êËùÔÚÐÐµ½ÎÄ¼þÄ©Î²ÄÚÈÝ
-D É¾³ý¹â±êËùÔÚ´¦µ½ÐÐÎ²ÄÚÈÝ
-:n1,n2d É¾³ýÖ¸¶¨·¶Î§ÐÐ
-yy ¸´ÖÆµ±Ç°ÐÐ
-nyy ¸´ÖÆµ±Ç°ÐÐÒÔÏÂnÐÐ
-p ð¤ÌùÔÚµ±Ç°ÐÐÒÔÏÂ
-P ð¤ÌùÔÚµ±Ç°ÐÐÒÔÉÏ
-u È¡ÏûÉÏÒ»²½²Ù×÷
-r Ìæ»»Ãþ¸ö×Ö·û
-R ´Ó¹â±êËùÔÚ´¦¿ªÊ¼Ìæ»»×Ö·û£¬esc½áÊø
-/string
-?text¡¡¡¡²éÕÒtext£¬·´Ïò²éÕÒ£¬°´n½¡²éÕÒÏÂÒ»¸ö£¬°´N½¡²éÕÒÇ°Ò»¸ö¡£
-:set ic ËÑË÷Ê±ºöÂÔ´óÐ¡Ð´:set noic 
-n ÏÂ¸öÎ»ÖÃ
+a¿¿¿¿¿¿¿¿¿¿
+
+A¿¿¿¿¿¿¿¿¿¿
+
+i¿¿¿¿¿¿¿¿¿¿
+
+I¿¿¿¿¿¿¿¿¿¿
+
+o¿¿¿¿¿¿¿¿
+
+O¿¿¿¿¿¿¿¿
+:set nu ¿¿¿¿
+:set nonu ¿¿¿¿
+
+gg ¿¿¿¿
+G  ¿¿¿¿¿
+
+nG ¿n¿
+
+:n ¿n¿ 
+0¿¿¿
+$¿¿¿
+
+x¿¿¿¿¿¿¿¿¿¿
+nx¿¿¿¿¿¿n¿¿¿
+dd ¿¿/¿¿ ¿¿¿¿¿
+ndd ¿¿/¿¿ ¿¿¿¿¿¿¿n¿
+dG ¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+
+D ¿¿¿¿¿¿¿¿¿¿¿¿
+:n1,n2d ¿¿¿¿¿¿¿
+
+yy ¿¿¿¿¿
+
+nyy ¿¿¿¿¿¿¿n¿
+
+p ¿¿¿¿¿¿¿¿
+P ¿¿¿¿¿¿¿¿
+u ¿¿¿¿¿¿¿
+r ¿¿¿¿¿¿
+R ¿¿¿¿¿¿¿¿¿¿¿¿¿esc¿¿
+
+/string
+
+?text¿¿¿¿text¿¿¿¿¿¿¿n¿¿¿¿¿¿¿¿N¿¿¿¿¿¿¿
+
+:set ic ¿¿¿¿¿¿¿¿:set noic 
+n ¿¿¿¿
 :%s/old/new/g
 :n1,n2s/old/new/g
-:n1,n2s/^/#/g ×¢ÊÍ:n1,n2s/^#//g  È¥³ý×¢ÊÍ
-:w ±£´æ
-:w new_filename Áí´æÎª
-:wq²¢ÍË³ö 
-ZZ ¿ì½Ý¼ü ±£´æÍË³ö
+
+:n1,n2s/^/#/g ¿¿:n1,n2s/^#//g  ¿¿¿¿
+
+:w ¿¿
+
+:w new_filename ¿¿¿
+:wq¿¿¿ 
+ZZ ¿¿¿ ¿¿¿¿
 :q!
-:wq! Ç¿ÖÆ±£´æ£¬Ö»ÓÐÎÄ¼þËùÓÐÕßºÍroot¿ÉÒÔÊ¹ÓÃ
+:wq! ¿¿¿¿¿¿¿¿¿¿¿¿¿root¿¿¿¿
 :r /etc/issue
-:r !date µ¼ÈëÃüÁîÄÚÈÝ
-:ab czk chenzhengkuo@qq.com   ÔÚÎÄ¼þÖÐÊäÈëczk ¿Õ¸ñ »á×Ô¶¯Ìæ»»Îªchenzhengkuo@qq.com ÖØ Æô¾ÍÏûÊ§¡£
-¿ÉÐ´µ½ÓÃ»§µÄÅäÖÃÎÄ¼þÖÐ³Ö¾Ã±£´æ vim /root/.vimrc
-w ÏòÇ°ÒÆ¶¯Ò»¸öµ¥´Ê£¨¹â±êÍ£ÔÚµ¥´ÊÊ×²¿£©£¬Èç¹ûÒÑµ½ÐÐÎ²£¬Ôò×ªÖÁÏÂÒ»ÐÐÐÐÊ×¡£´ËÃüÁî¿ì£¬¿ÉÒÔ ´úÌælÃüÁî¡£b ÏòºóÒÆ¶¯Ò»¸öµ¥´Ê 
-2b ÏòºóÒÆ¶¯2¸öµ¥´Ê
-e£¬Í¬w£¬Ö»²»¹ýÊÇ¹â±êÍ£ÔÚµ¥´ÊÎ²²¿ge£¬Í¬b£¬¹â±êÍ£ÔÚµ¥´ÊÎ²²¿¡£^ ÒÆ¶¯µ½±¾ÐÐµÚÒ»¸ö·Ç¿Õ°××Ö·ûÉÏ¡£
-f£¨find£©ÃüÁîÒ²¿ÉÒÔÓÃÓÚÒÆ¶¯£¬
-fx½«ÕÒµ½¹â±êºóµÚÒ»¸öÎªxµÄ×Ö·û£¬3fd½«ÕÒµ½µÚÈý¸öÎªdµÄ×Ö·û¡£F Í¬f£¬·´Ïò²éÕÒ¡£
-Ctrl + e ÏòÏÂ¹ö¶¯Ò»ÐÐ
-Ctrl + y ÏòÉÏ¹ö¶¯Ò»ÐÐ
-Ctrl + d ÏòÏÂ¹ö¶¯°ëÆÁ
-Ctrl + u ÏòÉÏ¹ö¶¯°ëÆÁ
-Ctrl + f ÏòÏÂ¹ö¶¯Ò»ÆÁ
-Ctrl + b ÏòÉÏ¹ö¶¯Ò»ÆÁ
+:r !date ¿¿¿¿¿¿
+:ab czk chenzhengkuo@qq.com   ¿¿¿¿¿¿czk ¿¿
+¿¿¿¿¿¿chenzhengkuo@qq.com ¿ ¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿ vim /root/.vimrc
+
+w
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿l¿¿¿b ¿¿¿¿¿¿¿¿ 
+2b ¿¿¿¿2¿¿¿
+
+e¿¿w¿¿¿¿¿¿¿¿¿¿¿¿¿ge¿¿b¿¿¿¿¿¿¿¿¿¿^
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+
+f¿find¿¿¿¿¿¿¿¿¿¿¿
+fx¿¿¿¿¿¿¿¿¿¿x¿¿¿¿3fd¿¿¿¿¿¿¿d¿¿¿¿
+F ¿f¿¿¿¿¿¿
+Ctrl + e ¿¿¿¿¿¿
+Ctrl + y ¿¿¿¿¿¿
+Ctrl + d ¿¿¿¿¿¿
+Ctrl + u ¿¿¿¿¿¿
+Ctrl + f ¿¿¿¿¿¿
+Ctrl + b ¿¿¿¿¿¿
 
 
 rpm -ivh 
-    -i£¨install£©   °²×°£¨°üÈ«Ãû£©
-    -v£¨verbose£©   ÏÔÊ¾ÏêÏ¸ÐÅÏ¢
-    -h£¨hash£©      ÏÔÊ¾½ø¶È
-    --nodeps        ²»¼ì²éÒÀÀµ£¬Ò»°ã²»ÓÃ
-    -U£¨upgrade£©   Éý¼¶£¨°üÈ«Ãû£©
-    -e              Ð¶ÔØ£¨°üÃû£©
-    -q              ²éÑ¯£¨°üÃû£©
-    -a              ²éÑ¯ËùÓÐ
-    -qi             Èí¼þÐÅÏ¢
-    -ql             ²éÑ¯°²×°Î»ÖÃ£¨°üÃû£©
-    -qf             ²éÑ¯ÎÄ¼þÊôÓÚÄÄ¸örpm°ü£¨ÎÄ¼þÃû£©
-    -qR             ²éÑ¯ÒÀÀµ
-    -p              ²éÑ¯Î´°²×°°üÐÅÏ¢£¨°üÈ«Ãû£©
-    -V              ¼ìÑérpm°ü£¨ÒÑ°²×°µÄ°üÃû£©
+    -i¿install¿   ¿¿¿¿¿¿¿
+    -v¿verbose¿   ¿¿¿¿¿¿
+    -h¿hash¿      ¿¿¿¿
+    --nodeps        ¿¿¿¿¿¿¿¿¿¿
+    -U¿upgrade¿   ¿¿¿¿¿¿¿
+    -e              ¿¿¿¿¿¿
+    -q              ¿¿¿¿¿¿
+    -a              ¿¿¿¿
+    -qi             ¿¿¿¿
+    -ql             ¿¿¿¿¿¿¿¿¿¿
+    -qf             ¿¿¿¿¿¿¿¿rpm¿¿¿¿¿¿
+    -qR             ¿¿¿¿
+    -p              ¿¿¿¿¿¿¿¿¿¿¿¿¿
+    -V              ¿¿rpm¿¿¿¿¿¿¿¿¿
 
-rpm Ä£¿éÒÀÀµ www.rpmfind.net
+rpm ¿¿¿¿ www.rpmfind.net
 
-rpm2cpio °üÈ«Ãû|cpio -idv .ÎÄ¼þ¾ø¶ÔÂ·¾¶   -i»¹Ô­  -d×Ô¶¯ÐÂ½¨Ä¿Â¼ -v ÏÔÊ¾¹ý³Ì
+rpm2cpio ¿¿¿|cpio -idv .¿¿¿¿¿¿   -i¿¿  -d¿¿¿¿¿¿ -v ¿¿¿¿
 rpm2cpio /mnt/cdrom/Packages/coreutils-8.4-19.el6.i686.rpm |cpio -idv ./bin/ls
 cp /root/bin/ls /bin/
 
 yum list
-yum search ¹Ø¼ü×Ö
-yum -y install °üÃû
-yum -y update  °üÃû
-yum -y remove  °üÃû
+yum search ¿¿¿
+yum -y install ¿¿
+yum -y update  ¿¿
+yum -y remove  ¿¿
 
 yum grouplist  
-yum groupremove  ×éÃû
-yum groupinstall ×éÃû
+yum groupremove  ¿¿
+yum groupinstall ¿¿
 
-¹âÅÌyumÔ´´î½¨²½Öè
-1. ¹ÒÔØ¹âÅÌ
+¿¿yum¿¿¿¿¿
+1. ¿¿¿¿
 mount /dev/cdrom /mnt/cdrom/
-2. ÈÃÍøÂçyumÔ´ÎÄ¼þÊ§Ð§
-enable = 0 ±êÊ¾yumÔ´Ê§Ð§£¬yumÔ´Ä¬ÈÏÎª¿ªÆô 
+2. ¿¿¿yum¿¿¿¿¿
+enable = 0 ¿¿yum¿¿¿¿yum¿¿¿¿¿¿ 
 
-server ¿ÉÒÔÆô¶¯ÔÚ/etc/init.d/ ÏÂµÄ·þÎñ
-/usr/local/src/  ´æ·ÅÔ´Âë°üµÄÎ»ÖÃ
+server ¿¿¿¿¿/etc/init.d/ ¿¿¿¿
+/usr/local/src/  ¿¿¿¿¿¿¿¿
 
 /etc/passwd
 /etc/shadow
@@ -271,36 +316,36 @@ server ¿ÉÒÔÆô¶¯ÔÚ/etc/init.d/ ÏÂµÄ·þÎñ
 /etc/gshadow
 /etc/skel
 
-date -d "1970-01-01 16066 days" »»Ëã³ÉÈÕÆÚ
+date -d "1970-01-01 16066 days" ¿¿¿¿¿
 echo $(($date --date="2014/01/06"+%s)/86400+1)
 
-useradd -u ÊÖ¹¤Ö¸¶¨ÓÃ»§UID
-        -d ¼ÒÄ¿Â¼
-	-c ÊÖ¹¤Ö¸¶¨ÓÃ»§ËµÃ÷
-	-g Ö¸¶¨³õÊ¼×é
-	-G Ö¸¶¨¸½¼þ×é
-	-s ÊÖ¹¤Ö¸¶¨ÓÃ»§µÄµÇÂ¼shell
+useradd -u ¿¿¿¿¿¿UID
+        -d ¿¿¿
+	-c ¿¿¿¿¿¿¿¿
+	-g ¿¿¿¿¿
+	-G ¿¿¿¿¿
+	-s ¿¿¿¿¿¿¿¿¿shell
 
-usermod Ñ¡Ïî ÓÃ»§Ãû   ÐÞ¸ÄÒÑ´æÔÚµÄÓÃ»§
-        -L            Ëø¶¨ÓÃ»§
-        -U            ½âËø
+usermod ¿¿ ¿¿¿   ¿¿¿¿¿¿¿¿
+        -L            ¿¿¿¿
+        -U            ¿¿
 
-/etc/default/useradd  ÓÃ»§Ä¬ÈÏÖµÎÄ¼þ
-/etc/login.defs      ÓÃ»§Ä¬ÈÏÎÄ¼þ2
+/etc/default/useradd  ¿¿¿¿¿¿¿
+/etc/login.defs      ¿¿¿¿¿¿2
 
-passwd Ñ¡Ïî ÓÃ»§Ãû
-       -S ²éÑ¯ÓÃ»§ÃÜÂë×´Ì¬£¬½örootÓÃ»§¿ÉÓÃ
-       -l Ëø¶¨ÓÃ»§¡£½öroot¿ÉÓÃ
-       -u ½âËøÓÃ»§£¬½öroot¿ÉÓÃ
-       --stdin¿ÉÓÃÓÃ¹ÜµÀ·ûÊä³öµÄÊý¾Ý×÷ÎªÓÃ»§µÄÃÜÂë
+passwd ¿¿ ¿¿¿
+       -S ¿¿¿¿¿¿¿¿¿¿root¿¿¿¿
+       -l ¿¿¿¿¿¿root¿¿
+       -u ¿¿¿¿¿¿root¿¿
+       --stdin¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 echo "123456"|passwd --stdin gavin
 
-chage Ñ¡Ïî ÓÃ»§Ãû    ÐÞ¸ÄÓÃ»§ÃÜÂë×´Ì¬
-chage -d 0 gavin     ÃÜÂë¹éÁã£¬ÈÃÓÃ»§µÇÂ¼Ê±Ç¿ÖÆÈÃÆä¸ÄÃÜ
+chage ¿¿ ¿¿¿    ¿¿¿¿¿¿¿¿
+chage -d 0 gavin     ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-userdel Ñ¡Ïî ÓÃ»§Ãû           É¾³ýÄ¿Â¼
-        -r                    É¾³ý¼ÒÄ¿Â¼
-ÊÖ¹¤É¾³ýÓÃ»§
+userdel ¿¿ ¿¿¿           ¿¿¿¿
+        -r                    ¿¿¿¿¿
+¿¿¿¿¿¿
 vim /etc/passwd
 vim /etc/shadow
 vim /etc/group
@@ -308,638 +353,649 @@ vim /etc/gshadow
 rm -fr /var/spool/mail/gavin
 rm -fr /home/gavin
 
-id ÓÃ»§Ãû
+id ¿¿¿
 
-su Ñ¡Ïî ÓÃ»§Ãû
-    -             Á¬´ø»·¾³Ò»ÆðÇÐ»»
-    -c            ½öÖ´ÐÐÒ»´Î£¬²»ÇÐ»»
+su ¿¿ ¿¿¿
+    -             ¿¿¿¿¿¿¿¿
+    -c            ¿¿¿¿¿¿¿¿¿
 su - root -c "cat /etc/shadow"
 
-whoami  µ±Ç°ÓÃ»§
-env     ²é¿´ÓÃ»§»·¾³±äÁ¿
+whoami  ¿¿¿¿
+env     ¿¿¿¿¿¿¿¿
 
-groupadd Ñ¡Ïî ×éÃû
-         -g            Ö¸¶¨gid
+groupadd ¿¿ ¿¿
+         -g            ¿¿gid
 
-groupmod Ñ¡Ïî ×éÃû
-	 -g             ÐÞ¸Ägid
-	 -n             ÐÞ¸Ä×éÃû
-groupmod -n testgrp group1£¨Ô­×éÃû£©
+groupmod ¿¿ ¿¿
+	 -g             ¿¿gid
+	 -n             ¿¿¿¿
+groupmod -n testgrp group1¿¿¿¿¿
 
-groupdel ×éÃû
-ÓÐ³õÊ¼ÓÃ»§ ²»ÄÜÉ¾£¬·ñÔò¿ÉÒÔÉ¾
+groupdel ¿¿
+¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿
 
-gpasswd Ñ¡Ïî       ×éÃû
-        -a ÓÃ»§Ãû  ×éÃû  °ÑÓÃ»§¼ÓÈëµ½×éÀï  £¨¸½¼ÓÓÃ»§£©
-	-d ÓÃ»§Ãû  ×éÃû  °ÑÓÃ»§´Ó×éÖÐÉ¾³ý
-dumpe2fs -h /dev/sda1 |grep "Default mount options" ²é¿´·ÖÇøACLÈ¨ÏÞÊÇ·ñ¿ªÆô
+gpasswd ¿¿       ¿¿
+        -a ¿¿¿  ¿¿  ¿¿¿¿¿¿¿¿  ¿¿¿¿¿¿
+	-d ¿¿¿  ¿¿  ¿¿¿¿¿¿¿¿
+
+
+
+
+dumpe2fs -h /dev/sda1 |grep "Default mount options" ¿¿¿¿ACL¿¿¿¿¿¿
 mount -o remount,acl /
-/etc/fstab  ÐÞ¸ÄÅäÖÃÎÄ¼þmount -o remount /   ÉúÐ§
-chown root:tgroup /project
-setfacl -m u:st:rx /project/
-setfacl -m g:tgroup:rx /project/
-setfacl -m m:rx       /project/
-mask È¨ÏÞ²»Ó°ÏìËùÓÐÕßµÄÈ¨ÏÞ£¬»áÓ°ÏìËùÊô×éµÄÈ¨ÏÞºÍaclÈ¨ÏÞ
-setfacl -x g:tgroup2 /project/ É¾³ýÄ³¸ö×éµÄaclÈ¨ÏÞ
-setfacl -b /project/  É¾³ýprojectµÄËùÓÐaclÈ¨ÏÞ
-setfacl -m u:st:rx -R /project/  µÝ¹éÉèÖÃaclÈ¨ÏÞ£¬-R²»ÄÜ·ÅÔÚºóÃæ¡¢Ö»Õë¶ÔÄ¿Â¼
-setfacl -m d:u:st:rx  /project/  ÉèÖÃÐÂ½¨µÄÎÄ¼þµÄÄ¬ÈÏaclÈ¨ÏÞ ¡¢Õë¶ÔÄ¿Â¼
+/etc/fstab  ¿¿¿¿¿¿
 
-set UID  ¶Ô¶þ½øÖÆ¿ÉÖ´ÐÐÎÄ¼þÓµÓÐÖ´ÐÐÈ¨ÏÞµÄÓÃ»§ÔÚÖ´ÐÐÊ±£¬ÁÙÊ±ÏíÓÐÎÄ¼þµÄËùÓÐÕßµÄÈ¨ÏÞ
-chmod 4775 ÎÄ¼þÃû  4ÎªSUIDÈ¨ÏÞ »ò
-chmod u+s  
-ÎÄ¼þÃûÏñvimÕâÐ©ÃüÁî£¬²»¿ÉÒÔ¸³ÓèSUIDÈ¨ÏÞ
-¶¨ÆÚÉ¨ÃèÏµÍ³ÖÐµÄÎÄ¼þµÄSUIDÈ¨ÏÞ 
-set GID ÁÙÊ±»ñµÃÎÄ¼þËùÊô×éµÄÈ¨ÏÞ
-Õë¶Ô¶þ½øÖÆÎÄ¼þ£¬ºÍSUIDÀàËÆ
-¿ÉÕë¶ÔÄ¿Â¼£¨ÓµÓÐ¶ÁºÍÖ´ÐÐÈ¨ÏÞ£©,ÆÕÍ¨ÓÃ»§ÔÚ´ËÄ¿Â¼ÖÐ´´½¨µÄÎÄ¼þµÄÊô×éÎª´ËÄ¿Â¼µÄÊô×é
+mount -o remount /   ¿¿
+
+chown root:tgroup /project
+
+setfacl -m u:st:rx /project/
+setfacl -m g:tgroup:rx /project/
+
+setfacl -m m:rx       /project/
+
+mask ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿acl¿¿
+setfacl -x g:tgroup2 /project/ ¿¿¿¿¿¿acl¿¿
+setfacl -b /project/  ¿¿project¿¿¿acl¿¿
+setfacl -m u:st:rx -R /project/  ¿¿¿¿acl¿¿¿-R¿¿¿¿¿¿¿¿¿¿¿¿
+
+setfacl -m d:u:st:rx  /project/  ¿¿¿¿¿¿¿¿¿¿acl¿¿ ¿¿¿¿¿
+
+
+
+set UID
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+chmod 4775 ¿¿¿  4¿SUID¿¿ ¿
+
+chmod u+s  
+¿¿¿
+¿vim¿¿¿¿¿¿¿¿¿¿SUID¿¿
+
+¿¿¿¿¿¿¿¿¿¿¿SUID¿¿ 
+set GID ¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿SUID¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿,¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 chmod 2775 /test/
 chmod g+s /test/
-chmod g-s /test/ È¡ÏûSGID »ò
+chmod g-s /test/ ¿¿SGID ¿
 chmod 775 /test/
 
-SBIT Ö»Õë¶ÔÄ¿Â¼£¬ÆÕÍ¨ÓÃ»§¶ÔÄ¿Â¼ÓÐwºÍxÈ¨ÏÞ£¨½â¾ö¼´Ê¹ÊÇ777È¨ÏÞµÄÎÄ¼þ£¬Ò²Ö»ÄÜÉ¾³ý×Ô¼ºµÄÎÄ¼þ£¬root³ýÍâ£¬Èç/tmp/ Ä¿Â¼£©
-chmod 1775 Ä¿Â¼Ãû
+SBIT
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿w¿x¿¿¿¿¿¿¿¿777¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿root¿¿¿¿/tmp/
+¿¿¿
+chmod 1775 ¿¿¿
 chmod o+t
 chmod 775
 chmod o-t
 
-chattr [+/-/=] [Ñ¡Ïî] ÎÄ¼þ»òÄ¿Â¼£¬¶ÔrootÓÐÐ§
+chattr [+/-/=] [¿¿] ¿¿¿¿¿¿¿root¿¿
 chattr + i /test/
-i£ºÎÄ¼þ£¬²»ÄÜÉ¾£¬¸ÄÃû£¬²»ÄÜÐÞ¸ÄÄÚÈÝ£¨Ö»ÄÜ¿´ £©
-   Ä¿Â¼£¬²»ÄÜ´´½¨¡¢É¾³ýÎÄ¼þ£¬µ«¿ÉÐÞ¸ÄÄ¿Â¼ÏÂÎÄ¼þµÄÄÚÈÝ£¨Ö»ÄÜÐÞ¸ÄÄ¿Â¼ÏÂÎÄ¼þÄÚÈÝ£©¡£
-a£ºÎÄ¼þ£¬Ö»ÄÜÔö¼ÓÎÄ¼þÄÚÈÝ£¬²»ÄÜÉ¾³ý£¬Ò²²»ÄÜÐÞ¸ÄÊý¾Ý¡££¨Ö»ÄÜ×·¼ÓÄÚÈÝ£©
-   Ä¿Â¼£¬ÔÊÐí´´½¨ºÍÐÞ¸ÄÎÄ¼þ£¬µ«²»ÄÜÐÞ¸ÄÎÄ¼þÃû£¬²»ÄÜÉ¾³ýÎÄ¼þ¡££¨Ö»ÄÜ´´½¨ºÍÐÞ¸ÄÎÄ¼þ£©
+i¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿ ¿
+   ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+a¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+   ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
 lsattr -a abc
        -a
        -d
 
-sudoÈ¨ÏÞ
-1.root°Ñ°ÑÖ»ÄÜ³¬¼¶ÓÃ»§Ö´ÐÐµÄÃüÁî¸³ÓèÆÕÍ¨ÓÃ»§¡£
-visudo  »ò 
+sudo¿¿
+1.root¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+visudo  ¿ 
 vi /etc/sudoers 
-ÓÃ»§ ±»¹ÜÀíµÄip/Íø¶Î   ¿ÉÓÃÉí·Ý  ÊÚÈ¨ÃüÁî£¨¾ø¶ÔÂ·¾¶£©
+¿¿ ¿¿¿¿ip/¿¿   ¿¿¿¿  ¿¿¿¿¿¿¿¿¿¿
 chen      ALL        = (ALL)     ALL
 chen      ALL        =          /sbin/shutdown/ -r now
-×éÃû
-%wheel    ALL        =£¨ALL£©    ALL               ¸ø×é¸³ÓèsudoÈ¨ÏÞ
-2.ÆÕÍ¨ÓÃ»§Ö´ÐÐ¡£
+¿¿
+%wheel    ALL        =¿ALL¿    ALL               ¿¿¿¿sudo¿¿
+2.¿¿¿¿¿¿¿
 
-df [Ñ¡Ïî] [¹ÒÔØµã]   ÎÄ¼þÏµÍ³²é¿´
-   -a                ÏÔÊ¾ËùÓÐµÄÎÄ¼þÏµÍ³ÐÅÏ¢£¬°üÀ¨ÌØÊâÎÄ¼þÏµÍ³£¬Èç/proc¡¢/sysfs
-   -h                Ê¹ÓÃÏ°¹ßµ¥Î»ÏÔÊ¾ÈÝÁ¿£¬ÈçKB£¬MB»òGB
-   -T                ÏÔÊ¾ÎÄ¼þÏµÍ³ÀàÐÍ
-   -m                ÒÔMBÎªµ¥Î»ÏÔÊ¾ÈÝÁ¿
-   -k                ÒÔKBÎªµ¥Î»ÏÔÊ¾ÈÝÁ¿£¬Ä¬ÈÏ¾ÍÊÇËü¡£
+df [¿¿] [¿¿¿]   ¿¿¿¿¿¿
+   -a                ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿/proc¿/sysfs
+   -h                ¿¿¿¿¿¿¿¿¿¿¿¿KB¿MB¿GB
+   -T                ¿¿¿¿¿¿¿¿
+   -m                ¿MB¿¿¿¿¿¿¿
+   -k                ¿KB¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-ll -h /         Ö»»áÍ³¼Æ²»°üº¬×ÓÄ¿Â¼µÄ´óÐ¡
+ll -h /         ¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-du [Ñ¡Ïî] [Ä¿Â¼»òÎÄ¼þ]
-    -a                   ÏÔÊ¾Ã¿¸ö×ÓÎÄ¼þµÄ´ÅÅÌÕ¼ÓÃÁ¿£¬Ä¬ÈÏÖ»Í³¼Æ×ÓÄ¿Â¼µÄ´ÅÅÌÕ¼ÓÃÁ¿
-    -h                   ÈËÐÔ»¯ÏÔÊ¾
-    -s			 Í³¼Æ×ÜÕ¼ÓÃÁ¿£¬¶ø²»ÊÇÁÐ³öÄ¿Â¼ºÍ×ÓÎÄ¼þµÄÕ¼ÓÃÁ¿
+du [¿¿] [¿¿¿¿¿]
+    -a
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+    -h                   ¿¿¿¿¿
+    -s			 ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-df ¿´µ½µÄÊÇ±»ÎÄ¼þ¡¢ÏµÍ³¡¢³ÌÐòÕ¼ÓÃµÄ¿Õ¼ä£¬¿´µ½µÄÊ£Óà¿Õ¼ä²ÅÊÇÕæµÄ¿Õ¼ä
-du ½ö¸Ã¸ü·ÖÇøÎÄ¼þÕ¼µÄ¿Õ¼ä
+df ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+du ¿¿¿¿¿¿¿¿¿¿¿
 
-fsck [Ñ¡Ïî] ·ÖÇøÉè±¸ÎÄ¼þÃû   ÎÄ¼þÏµÍ³ÐÞ¸´£¬ÏµÍ³»á×Ô¶¯Ö´ÐÐ
-      -a                     ²»ÓÃÏÔÊ¾ÓÃ»§ÌáÉý£¬×Ô¶¯ÐÞ¸´ÎÄ¼þÏµÍ³
-      -y                     ×Ô¶¯ÐÞ¸´¡£ºÍ-aÒ»ÖÂ£¬²»¹ýÓÐÐ©ÎÄ¼þÏµÍ³Ö»Ö§³Ö-y
+fsck [¿¿] ¿¿¿¿¿¿¿   ¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+      -a                     ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+      -y                     ¿¿¿¿¿¿-a¿¿¿¿¿¿¿¿¿¿¿¿¿¿-y
 
-dumpe2fs ·ÖÇøÉè±¸ÎÄ¼þÃû
+dumpe2fs ¿¿¿¿¿¿¿
 
-¸ñÊ½ÎÄ¼þÏµÍ³£¬¼ÙÉèÃ¿¸öÊý¾Ý¿éÎª4k£¬ÈçÓÐÒ»¸ö10kµÄÎÄ¼þÐèÒªÕ¼ÓÃ3¸öÊý¾Ý¿é£¬ÇÒ×îºóÒ»¿éµÄÊý¾Ý¿éÊ£ÓàµÄ2k²»ÄÜÔÙ·Å¶«Î÷
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿4k¿¿¿¿¿10k¿¿¿¿¿¿¿3¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿2k¿¿¿¿¿¿
 
-fdisk -l ²é¿´·ÖÇø
+fdisk -l ¿¿¿¿
 
-mount -t vfat /dev/sdb1 /mnt/usb/       //¹ÒÔØuÅÌ  
+mount -t vfat /dev/sdb1 /mnt/usb/       //¿¿u¿  
 
-Linux²»Ö§³ÖNTFSÎÄ¼þÏµÍ³
-http://www.tuxera.com/community/open-source-ntfs-3g/   ÏÂÔØºó±àÒë°²×°£¬Ö§³ÖNTFS
-mount -t ntfs-3g ·ÖÇøÉè±¸ÎÄ¼þÃû ¹ÒÔØµã
+Linux¿¿¿NTFS¿¿¿¿
+http://www.tuxera.com/community/open-source-ntfs-3g/
+¿¿¿¿¿¿¿¿¿¿NTFS
+mount -t ntfs-3g ¿¿¿¿¿¿¿ ¿¿¿
 
 fdisk /dev/sdb
-      d É¾³ýÒ»¸ö·ÖÇø
-      l ÏÔÊ¾ÒÑÖªµÄÎÄ¼þÏµÍ³ÀàÐÍ£¬82ÎªLinux swap£¬83ÎªLinux·ÖÇø
-      m ÏÔÊ¾°ïÖú
-      n ÐÂ½¨·ÖÇø
-      p ÏÔÊ¾·ÖÇøÁÐ±í
-      q ²»±£´æÍË³ö
-      w ±£´æ²¢ÍË³ö
-      t ¸Ä±äÒ»¸ö·ÖÇøµÄÏµÍ³ID
+      d ¿¿¿¿¿¿
+      l ¿¿¿¿¿¿¿¿¿¿¿¿82¿Linux swap¿83¿Linux¿¿
+      m ¿¿¿¿
+      n ¿¿¿¿
+      p ¿¿¿¿¿¿
+      q ¿¿¿¿¿
+      w ¿¿¿¿¿
+      t ¿¿¿¿¿¿¿¿¿ID
 partprobe
 mkfs -t ext4 /dev/sdb1
 
 mount /dev/sdb1/ /disk1/
 
-×Ô¶¯¹ÒÔØ ¼ÈÐ´Èë/etc/fstab  
-µÚÒ»×Ö¶Î£º·ÖÇøÉè±¸ÎÄ¼þÃû»òUUID£¨Ó²ÅÌÍ¨ÓÃÎ¨Ò»Ê¶±ðÂë£©
-µÚ¶þ×Ö¶Î£º¹ÒÔØµã
-µÚÈý×Ö¶Î: ÎÄ¼þÏµÍ³Ãû³Æ
-µÚËÄ×Ö¶Î£º¹ÒÔØ²ÎÊý
-µÚÎå×Ö¶Î£ºÖ¸¶¨·ÖÇøÊÇ·ñ±»dump±¸·Ý£¬0´ú±í ²»±¸·Ý£¬1´ú±íÃ¿Ìì±¸·Ý£¬2´ú±í²»¶¨ÆÚ±¸·Ý
-µÚÁù×Ö¶Î£ºÖ¸¶¨·ÖÇøÊÇ·ñ±»fsck¼ì²â£¬0´ú±í²»¼ì²â£¬ÆäËûÊý×Ö´ú±íÓÅÏÈ¼¶£¬1µÄÓÅÏÈ¼¶±È2¸ß
+¿¿¿¿ ¿¿¿/etc/fstab  
+¿¿¿¿¿¿¿¿¿¿¿¿¿UUID¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿
+¿¿¿¿: ¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿dump¿¿¿0¿¿ ¿¿¿¿1¿¿¿¿¿¿¿2¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿fsck¿¿¿0¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿1¿¿¿¿¿2¿
 
-ÍØÕ¹·ÖÇø£¬²»ÓÃ¹ÒÔØ¡£
-ÅäÖÃÍêºó mount -a ´ÓÐÂ¹ÒÔØ£¨²»ÓÃÖØÆô £©
+¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿ mount -a ¿¿¿¿¿¿¿¿¿ ¿
 
-Èç¹ûÏµÍ³±ÀÀ££¬ÐÞ¸Ä/etc/fstab ÎÄ¼þ£¨Ö»¶Á²»ÄÜ±£´æ£¬¿ÉÒÔÖØÐÂ¹ÒÔØÒ»±émount -o remount,rw /£©
+¿¿¿¿¿¿¿¿¿/etc/fstab ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿mount -o
+remount,rw /¿
 
-rpm°²×°µÄ¶ÀÁ¢·þÎñ
-/etc/init.d/ :Æô¶¯½Å±¾Î»ÖÃ
-/etc/sysconfig/ :³õÊ¼»·¾³ÅäÖÃÎÄ¼þÎ»ÖÃ
-/etc/ :         ÅäÖÃÎÄ¼þÎ»ÖÃ
-/etc/xinetd.conf   xinetd ÅäÖÃÎÄ¼þ
-/etc/xinetd.d/ :»ùÓÚxinetd·þÎñµÄÆô¶¯½Å±¾
-/var/lib/ :  ·þÎñ²úÉúµÄÊý¾Ý·ÅÔÚÕâÀï
-/var/log/ : ÈÕÖ¾
+rpm¿¿¿¿¿¿¿
+/etc/init.d/ :¿¿¿¿¿¿
+/etc/sysconfig/ :¿¿¿¿¿¿¿¿¿¿
+/etc/ :         ¿¿¿¿¿¿
+/etc/xinetd.conf   xinetd ¿¿¿¿
+/etc/xinetd.d/ :¿¿xinetd¿¿¿¿¿¿¿
+/var/lib/ :  ¿¿¿¿¿¿¿¿¿¿¿
+/var/log/ : ¿¿
 
-¶ÀÁ¢·þÎñµÄÆô¶¯£ºservice ·þÎñÃû³Æ start|stop|restart|status
-                /etc/init.d ·þÎñÃû start|stop|restart|status 
+¿¿¿¿¿¿¿¿service ¿¿¿¿ start|stop|restart|status
+                /etc/init.d ¿¿¿ start|stop|restart|status 
 
-×ÔÆô¶¯µÄÈýÖÖ·½·¨£º
+¿¿¿¿¿¿¿¿¿
 1.chkconfig [--level 2345] httpd on
   chkconfig [--level 2345] httpd off
-  chkconfig [--list]        ²éÑ¯
+  chkconfig [--list]        ¿¿
 
-2.ÐÞ¸Ä/etc/rc.d/rc.local ÎÄ¼þ  £¨½¨Òé·½Ê½£©
+2.¿¿/etc/rc.d/rc.local ¿¿  ¿¿¿¿¿¿
 
-3.Ê¹ÓÃntsysvÃüÁî¹ÜÀí×ÔÆô¶¯
+3.¿¿ntsysv¿¿¿¿¿¿¿
 
-touch ÃüÁî·ÃÎÊÒÑ´æÔÚÎÄ¼þ£¬»áÐÞ¸ÄÎÄ¼þµÄ×îºóÐÞ¸ÄÊ±¼ä
+touch ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-yum -y install xinetd                 °²×°xinetd ³¬¼¶ÊØ»¤½ø³Ì
-yum -y install telnet-server          °²×°telnet-server
-vim /etc/xinetd.d/telnet ½«disable¸ÄÎªno
+yum -y install xinetd                 ¿¿xinetd ¿¿¿¿¿¿
+yum -y install telnet-server          ¿¿telnet-server
+vim /etc/xinetd.d/telnet ¿disable¿¿no
 service xinetd restart
-chkconfig telnet off ¹Ø±Õ×ÔÆô¶¯
-»ùÓÚxinetdµÄ·þÎñÆô¶¯ºÍ×ÔÆô¶¯ÎªÒ»¸ö¸ÅÄî£¬¶þÕßºÏÒ»¡£
+chkconfig telnet off ¿¿¿¿¿
+¿¿xinetd¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-ÈÃÔ´Âë°ü°²×°µÄApache¿ÉÒÔ±»serviceÊ¶±ð
-ln -s /usr/local/apache2/bin/apachectl /etc/init.d/apache  ¾Í¿ÉÒÔ±»serviceÃüÁîÊ¶±ð£¬¼´¿ÉÊ¹ÓÃservice apache start
+¿¿¿¿¿¿¿Apache¿¿¿service¿¿
+ln -s /usr/local/apache2/bin/apachectl /etc/init.d/apache
+¿¿¿¿service¿¿¿¿¿¿¿¿¿service apache start
 
-ÈÃÔ´Âë°ü°²×°µÄapache¿ÉÒÔ±»chkconfigºÍntsysvÊ¶±ð¹ÜÀí
-1. ls /etc/rc.d/rc3.d/      ²é¿´·þÎñÆô¶¯ºÍ¹Ø±ÕË³ sÎªÆô¶¯Ë³Ðò£¬kÎª¹Ø±ÕË³Ðò
+¿¿¿¿¿¿¿apache¿¿¿chkconfig¿ntsysv¿¿¿¿
+1. ls /etc/rc.d/rc3.d/      ¿¿¿¿¿¿¿¿¿¿ s¿¿¿¿¿¿k¿¿¿¿¿
 2.vim /etc/init.d/apache
-       £¨¼ÓÈë       ÔËÐÐ¼¶±ð Æô¶¯Ë³Ðò ¹Ø±ÕË³Ðò      £©
-	#chkconfig:   35      86        76        £¨Æô¶¯Ë³ÐòºÍ¹Ø±ÕË³Ðò²»ÄÜºÍÏÖÓÐµÄÖØµþ£©
-	#description: source package apache      (¿ÉÒÔËæÒâÐ´)
-3.chkconfig --add apache ½«apache¼ÓÈëchkconfig
-  chkconfig --del apache ½«apache´ÓchkconfigÉ¾³ý
+       ¿¿¿       ¿¿¿¿ ¿¿¿¿ ¿¿¿¿      ¿
+	#chkconfig:   35      86        76
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+	#description: source package apache      (¿¿¿¿¿)
+3.chkconfig --add apache ¿apache¿¿chkconfig
+  chkconfig --del apache ¿apache¿chkconfig¿¿
 
-ps aux ²é¿´ÏµÍ³ÖÐµÄËùÓÐ½ø³Ì£¬Unix·ç¸ñ
-   a   ²é¿´ËùÓÐÇ°Ì¨½ø³Ì
-   x   ²é¿´ËùÓÐºóÌ¨½ø³Ì
-   u   ÏÔÊ¾ÄÄ¸öÓÃ»§²úÉú
-ps -le ²é¿´ÏµÍ³ÖÐËùÓÐ½ø³Ì£¬Linux·ç¸ñ
-   -l  ÏÔÊ¾¸ü¼ÓÏêÏ¸µÄÐÅÏ¢
-   -e  ÏÔÊ¾ËùÓÐ½ø³Ì
+ps aux ¿¿¿¿¿¿¿¿¿¿¿Unix¿¿
+   a   ¿¿¿¿¿¿¿¿
+   x   ¿¿¿¿¿¿¿¿
+   u   ¿¿¿¿¿¿¿¿
+ps -le ¿¿¿¿¿¿¿¿¿¿Linux¿¿
+   -l  ¿¿¿¿¿¿¿¿¿
+   -e  ¿¿¿¿¿¿
 
 
-tty1-tty6 ÊÇ±¾µØ×Ö·ûÖÕ¶Ë
-tty7 Îª±¾µØÍ¼ÐÎÖÕ¶Ë
-pts/0-255 ´ú±íÐéÄâÖÕ¶Ë
-? ´ú±í½ø³Ì²»ÊÇÓÉÖÕ¶Ëµ÷ÓÃ
+tty1-tty6 ¿¿¿¿¿¿¿
+tty7 ¿¿¿¿¿¿¿
+pts/0-255 ¿¿¿¿¿¿
+? ¿¿¿¿¿¿¿¿¿¿¿
 
-½ø³Ì×´Ì¬£ºRÔËÐÐ¡¢SÐÝÃß¡¢TÍ£Ö¹¡¢s°üº¬×Ó½ø³Ì¡¢+Î»ÓÚºóÌ¨
+¿¿¿¿¿R¿¿¿S¿¿¿T¿¿¿s¿¿¿¿¿¿+¿¿¿¿
 
-USER  PID     %CPU      %MEN            VSZ            RSS         TTY     STAT     START         TIME              COMMAND
-ÓÃ»§ ½ø³Ìid Õ¼ÓÃµÄcup ÎïÀíÄÚ´æ Õ¼ÓÃµÄÐéÄâÄÚ´æKB Õ¼ÓÃµÄÊ±¼äÄÚ´æKB ÔËÐÐÖÕ¶Ë ½ø³Ì×´Ì¬ Æô¶¯Ê±¼ä Õ¼ÓÃµÄcpuÔËËãÊ±¼ä ²úÉú´Ë½ø³ÌµÄÃüÁîÃû
+USER  PID     %CPU      %MEN            VSZ            RSS         TTY
+STAT     START         TIME              COMMAND
+¿¿ ¿¿id ¿¿¿cup ¿¿¿¿ ¿¿¿¿¿¿¿KB ¿¿¿¿¿¿¿KB ¿¿¿¿
+¿¿¿¿ ¿¿¿¿ ¿¿¿cpu¿¿¿¿ ¿¿¿¿¿¿¿¿¿
 
-top                                              1·ÖÖÓ 5·ÖÖÓ 15·ÖÖÓ
-top - 17:29:16 up  1:14,  1 user,  load average: 0.00, 0.00, 0.00    £¨µ¥ºË´óÓÚ1´ú±íÏµÍ³Ñ¹Á¦´ó£¬4ºË´óÓÚ4Ñ¹Á¦´ó£¬8ºË´óÓÚ8Ñ¹Á¦´ó£©
-Tasks: 105 total,   1 running, 104 sleeping,   0 stopped,   0 zombie£¨½©Ê¬½ø³Ì£¬Òª¹Ø±Õ»¹Î´¹Ø±ÕµÄ½ø³Ì£©
-Cpu(s):  0.1%us,  0.1%sy,   0.0%ni,               99.3%id,  0.5%wa,     0.0%hi,       0.0%si,    0.0%st
-£¨ÓÃ»§Ä£Ê½Õ¼ÓÃ ÏµÍ³Ä£Ê½.. ¸Ä±ä¹ýÓÅÏÈ¼¶µÄÓÃ»§½ø³Ì.. ¿ÕÏÐÂÊ ÊäÈëÊä³ö.. Ó²ÖÐ¶Ï·þÎñÇëÇó.. ÈíÖÐ¶Ï.... ÐéÄâÊ±¼ä°Ù·Ö±È,ÓÐÐéÄâ»úÊ±£¬ÐéÄâcpuµÈ´ýÊµ¼ÊcpuµÄÊ±¼ä£©
+top                                              1¿¿ 5¿¿ 15¿¿
+top - 17:29:16 up  1:14,  1 user,  load average: 0.00, 0.00, 0.00
+¿¿¿¿¿1¿¿¿¿¿¿¿¿4¿¿¿4¿¿¿¿8¿¿¿8¿¿¿¿
+Tasks: 105 total,   1 running, 104 sleeping,   0 stopped,   0
+zombie¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+Cpu(s):  0.1%us,  0.1%sy,   0.0%ni,               99.3%id,  0.5%wa,
+0.0%hi,       0.0%si,    0.0%st
+¿¿¿¿¿¿¿ ¿¿¿¿.. ¿¿¿¿¿¿¿¿¿¿¿.. ¿¿¿ ¿¿¿¿..
+¿¿¿¿¿¿¿.. ¿¿¿....
+¿¿¿¿¿¿¿,¿¿¿¿¿¿¿¿cpu¿¿¿¿cpu¿¿¿¿
 Mem:   1020292k total,   196864k used,   823428k free,    20052k buffers
-£¨     ÎïÀíÄÚ´æ×Ü´óÐ¡    Ê¹ÓÃÁË¶àÉÙ      ¿ÕÏÐ¶àÉÙ          ÓÐ¶àÉÙÔÙ×ö»º³å£©
+¿     ¿¿¿¿¿¿¿    ¿¿¿¿¿      ¿¿¿¿          ¿¿¿¿¿¿¿¿
 Swap:  4128764k total,        0k used,  4128764k free,    74464k cached
-£¨     ×Ü´óÐ¡               Ê¹ÓÃÁË¶àÉÙ  ¿ÕÏÐ¶àÉÙ          ×÷Îª»º´æµÄ½»»¥·ÖÇøµÄ´óÐ¡£©
+¿     ¿¿¿               ¿¿¿¿¿  ¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿
   PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND
  1701 root      20   0 15032 1104  828 R  2.0  0.1   0:00.01 top
     1 root      20   0 19356 1512 1212 S  0.0  0.1   0:00.46 init
     2 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kthreadd
 
-pstree [Ñ¡Ïî]        ²é¿´½ø³ÌÊ÷
-       -p            ÏÔÊ¾½ø³ÌµÄpid
-       -u            ÏÔÊ¾½ø³ÌµÄËùÊôÓÃ»§
+pstree [¿¿]        ¿¿¿¿¿
+       -p            ¿¿¿¿¿pid
+       -u            ¿¿¿¿¿¿¿¿¿
 
-kill [-1/-9/-15] pid  Ä¬ÈÏÎª-15
-      -15             Õý³£¹Ø±Õ
-      -9              Ç¿ÖÆ¹Ø±Õ
-      -1              ÖØÆô
+kill [-1/-9/-15] pid  ¿¿¿-15
+      -15             ¿¿¿¿
+      -9              ¿¿¿¿
+      -1              ¿¿
 
-killall [-i/-I] [-1/-9/-15] ½ø³ÌÃû
-        -i                  ½»»¥Ê½
-        -I                  ºöÂÔ½ø³ÌÃû´óÐ¡Ð´
+killall [-i/-I] [-1/-9/-15] ¿¿¿
+        -i                  ¿¿¿
+        -I                  ¿¿¿¿¿¿¿¿
 
-pkill [Ñ¡Ïî][ÐÅºÅ] ½ø³ÌÃû
-       -t                   °´ÖÕ¶ËºÅ   
+pkill [¿¿][¿¿] ¿¿¿
+       -t                   ¿¿¿¿   
 pkill  -t   -9     tty1
 
-tar -zcf etc.tar.gz /etc &  ·ÅÔÚºóÌ¨Ö´ÐÐ£¨& °Ñ½ø³Ì·ÅÔÚºóÌ¨Ö´ÐÐ£©
-£¨top£© ctrl+z              ·ÅÔÚºóÌ¨ÔÝÍ££¨ctrl+z°Ñ½ø³Ì·ÅÔÚºóÌ¨ÔÝÍ££©
+tar -zcf etc.tar.gz /etc &  ¿¿¿¿¿¿¿& ¿¿¿¿¿¿¿¿¿¿
+¿top¿ ctrl+z              ¿¿¿¿¿¿¿ctrl+z¿¿¿¿¿¿¿¿¿¿
 
-jobs ²é¿´ºóÌ¨¹¤×÷
+jobs ¿¿¿¿¿¿
 
-fg £¨%¹¤×÷ºÅ£©    »Ö¸´µ½Ç°Ì¨£¬²»¼Ó¹¤×÷ºÅ£¬»áÏÈ½«´ø+ºÅµÄ½ø³Ì»Ö¸´£¬µÚ¶þ´ÎÔÙ°Ñ-ºÅ½ø³Ì»Ö¸´
+fg ¿%¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿+¿¿¿¿¿¿¿¿¿¿¿¿-¿¿¿¿¿
 fg %1
 
-bg ¹¤×÷ºÅ     °ÑºóÌ¨ÔÝÍ£µÄ½ø³Ì»Ö¸´µ½ºóÌ¨ÔËÐÐ£¨µ«Èç¹ûÊÇÀàËÆÓÚtopÕâÖÖ±ØÐëºÍÇ°Ì¨½»»¥µÄÃüÁî£¬ÒÀÈ»ÊÇstop×´Ì¬£©
+bg ¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿top¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿stop¿¿¿
 bg %3
 
-vmstat [Ë¢ÐÂÑÓÊ± Ë¢ÐÂ´ÎÊý]  ¼à¿ØÏµÍ³×ÊÔ´
-vmstat   1        5         Ã¿Ò»ÃëË¢ÐÂÒ»´Î£¬Ò»¹²Ë¢ÐÂ5´Î
+vmstat [¿¿¿¿ ¿¿¿¿]  ¿¿¿¿¿¿
+vmstat   1        5         ¿¿¿¿¿¿¿¿¿¿¿¿5¿
 
-dmesg ²é¿´¿ª»úÐÅÏ¢
-dmesg |grep CPU ¿ÉÒÔ²é¿´¿ª»úcpuÐÅÏ¢£¬ºÍÓ²¼þÐÅÏ¢
+dmesg ¿¿¿¿¿¿
+dmesg |grep CPU ¿¿¿¿¿¿cpu¿¿¿¿¿¿¿¿
 dmesg |grep eth0
 
 free [-k/-m/-g]
 total       used       free     shared    buffers     cached
-Mem:       1572988    1509260      63728          0      62800     277888              ±íÊ¾ÎïÀíÄÚ´æÍ³¼Æ
--/+ buffers/cache:    1168572     404416                                               ±íÊ¾ÎïÀíÄÚ´æµÄ»º´æÍ³¼Æ
-Swap:      2096472      16628    2079844                                               ±íÊ¾Ó²ÅÌÉÏ½»»»·ÖÇøµÄÊ¹ÓÃÇé¿ö
+Mem:       1572988    1509260      63728          0      62800     277888
+¿¿¿¿¿¿¿¿
+-/+ buffers/cache:    1168572     404416
+¿¿¿¿¿¿¿¿¿¿¿
+Swap:      2096472      16628    2079844
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-cache£¨»º´æ£© ¼ÓËÙÊý¾Ý¶ÁÈ¡
-buffer£¨»º³å£©¼ÓËÙÊý¾ÝÐ´ÈëÓ²ÅÌ
+cache¿¿¿¿ ¿¿¿¿¿¿
+buffer¿¿¿¿¿¿¿¿¿¿¿¿
 
-cat /proc/cpuinfo ²é¿´cpuÐÅÏ¢
+cat /proc/cpuinfo ¿¿cpu¿¿
 
-uptime top¡¢wÃüÁîµÄµÚÒ»ÐÐ
+uptime top¿w¿¿¿¿¿¿
 
-uname [Ñ¡Ïî] ²é¿´ÄÚºËÐÅÏ¢
-       -a    ²é¿´ÏµÍ³ËùÓÐÏà¹ØÐÅÏ¢
-       -r    ²é¿´ÄÚºË°æ±¾
-       -s    ²é¿´ÄÚºËÃû³Æ£¬Ä¬ÈÏ
+uname [¿¿] ¿¿¿¿¿¿
+       -a    ¿¿¿¿¿¿¿¿¿¿
+       -r    ¿¿¿¿¿¿
+       -s    ¿¿¿¿¿¿¿¿¿
 
-file /bin/ls ÅÐ¶Ï²Ù×÷ÏµÍ³Î»Êý£¨Èç:32Î»or64Î»£©
-          (ÕâÀï)
-bin/ls: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, stripped
+file /bin/ls ¿¿¿¿¿¿¿¿¿¿:32¿or64¿¿
+          (¿¿)
+bin/ls: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically
+linked (uses shared libs), for GNU/Linux 2.6.18, stripped
 
-lsb_release -a ²é¿´ÏµÍ³·¢ÐÐ°æ±¾
+lsb_release -a ¿¿¿¿¿¿¿¿
 
-lsof [Ñ¡Ïî]     ÁÐ³ö½ø³Ì´ò¿ª»òÊ¹ÓÃµÄÎÄ¼þÐÅÏ¢
-     -c ×Ö·û´®  Ö»ÁÐ³öÒÔ×Ö·û´®¿ªÍ·µÄ½ø³Ì´ò¿ªµÄÎÄ¼þ
-     -u ÓÃ»§Ãû  Ö»ÁÐ³öÄ³¸öÓÃ»§µÄ½ø³Ì´ò¿ªµÄÎÄ¼þ
-     -p pid     ÁÐ³öÄ³¸öPID½ø³Ì´ò¿ªµÄÎÄ¼þ  
+lsof [¿¿]     ¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+     -c ¿¿¿  ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+     -u ¿¿¿  ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+     -p pid     ¿¿¿¿PID¿¿¿¿¿¿¿  
 
-crontab [Ñ¡Ïî]   ¶¨Ê±ÈÎÎñ
-        -e       ±à¼­crontab¶¨Ê±ÈÎÎñ
-        -l       ²éÑ¯crontabÈÎÎñ
-        -r       É¾³ýµ±Ç°ÓÃ»§ËùÓÐµÄcrontabÈÎÎñ    
+crontab [¿¿]   ¿¿¿¿
+        -e       ¿¿crontab¿¿¿¿
+        -l       ¿¿crontab¿¿
+        -r       ¿¿¿¿¿¿¿¿¿crontab¿¿    
 
-*          *       *      *       *      ÈÎÎñ
-µÚ¼¸·ÖÖÓ µÚ¼¸Ð¡Ê± ¼¸ºÅ  µÚ¼¸¸öÔÂ ÐÇÆÚ¼¸
-*    ËùÓÐ·¶Î§
-,    ´ú±í²»Á¬Ðø·¶Î§ ¡°0 8,12,16 * * * ÃüÁî¡± ´ú±íÃ÷Ìì8µã0·Ö£¬12µã0·Ö£¬16µã0·ÖÖ´ÐÐÃüÁî
--    ´ú±íÁ¬ÐøµÄ·¶Î§ ¡°0 5 * * 1-6 ÃüÁî¡± ÖÜÒ»µ½ÖÜÁù5µã0·ÖÖ´ÐÐ
-*/n  Ã¿¸ônÒ»´Î      ¡°*/10 * * * * ÃüÁî¡±Ã¿Ê®·ÖÖÓÖ´ÐÐÒ»´Î   
+*          *       *      *       *      ¿¿
+¿¿¿¿ ¿¿¿¿ ¿¿  ¿¿¿¿ ¿¿¿
+*    ¿¿¿¿
+,    ¿¿¿¿¿¿¿ ¿0 8,12,16 * * * ¿¿¿
+¿¿¿¿8¿0¿¿12¿0¿¿16¿0¿¿¿¿¿
+-    ¿¿¿¿¿¿¿ ¿0 5 * * 1-6 ¿¿¿ ¿¿¿¿¿5¿0¿¿¿
+*/n  ¿¿n¿¿      ¿*/10 * * * * ¿¿¿¿¿¿¿¿¿¿¿   
 
-³£¼ûÈÕÖ¾:
-/var/log/cron ÏµÍ³¶¨Ê±ÈÎÎñÈÕÖ¾
-/var/log/cups ´òÓ¡ÐÅÏ¢ÈÕÖ¾
-/var/log/dmesg ¿ª»ú×Ô¼ìÈÕÖ¾£¬¿ÉÓÃdmesgÃüÁî²é¿´
-/var/log/message ÏµÍ³ÖØÒªÐÅÏ¢ÈÕÖ¾¡£ÏµÍ³³öÏÖÎÊÌâÊ±£¬Ê×ÏÈ¼ì²éÕâ¸öÎÄ¼þ¡£
-/var/log/mailog ¼ÇÂ¼ÓÊ¼þÐÅÏ¢
-/var/log/secure ¼ÇÂ¼ÑéÖ¤ÊÚÈ¨·½ÃæµÄÐÅÏ¢£¬Ö»ÒªÉæ¼°ÕË»§ºÍÃÜÂëµÄ³ÌÐò¶¼»á¼ÇÂ¼¡£ÈçsshµÇÂ¼£¬suÇÐ»»£¬sudoÊÚÈ¨£¬Ìí¼ÓÓÃ»§£¬ÐÞ¸ÄÃÜÂë¶¼»á¼ÇÂ¼¡£
-/var/log/wtmp ÓÀ¾Ã¼ÇÂ¼ËùÓÐÓÃ»§µÄµÇÂ¼¡¢×¢Ïú¡¢¹Ø»ú¡¢ÖØÆô¡¢Æô¶¯ÊÂ¼þ¡£¶þ½øÖÆÎÄ¼þ£¬ÓÃÃüÁîlast²é¿´
-/var/log/btmp ¼ÇÂ¼´íÎóµÇÂ¼ÈÕÖ¾£¬                                  ¶þ½øÖÆÎÄ¼þ£¬ÓÃÃüÁîlastb²é¿´
-/var/log/lastlog ¼ÇÂ¼ËùÓÐÓÃ»§×îºóÒ»´ÎµÄµÇÂ¼Ê±¼äÈÕÖ¾¡£             ¶þ½øÖÆÎÄ¼þ£¬ÓÃÃüÁîlastlog²é¿´
-/var/log/utmp ¼ÇÂ¼ÒÑ¾­µÇÂ¼µÄÓÃ»§µÄÐÅÏ¢£¬ËæÓÃ»§×¢ÏúµÇÂ¼²»¶Ï±ä»¯¡£  ¶þ½øÖÆÎÄ¼þ£¬ÓÃÃüÁîw£¬who£¬users²é¿´
+¿¿¿¿:
+/var/log/cron ¿¿¿¿¿¿¿¿
+/var/log/cups ¿¿¿¿¿¿
+/var/log/dmesg ¿¿¿¿¿¿¿¿¿dmesg¿¿¿¿
+/var/log/message ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+/var/log/mailog ¿¿¿¿¿¿
+/var/log/secure
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿ssh¿¿¿su¿¿¿sudo¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+/var/log/wtmp
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿last¿¿
+/var/log/btmp ¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿lastb¿¿
+/var/log/lastlog ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿lastlog¿¿
+/var/log/utmp ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿w¿who¿users¿¿
 
-ÈÕÖ¾¸ñÊ½£º
-ÊÂ¼þ·¢ÉúµÄÊÂ¼þ  ·¢ÉúµÄÊÂ¼þµÄ·þÎñÆ÷µÄÖ÷»úÃû  ²úÉúÊÂ¼þµÄ·þÎñÃû»ò³ÌÐòÃû  ÊÂ¼þ¾ßÌåÐÅÏ¢
+¿¿¿¿¿
+¿¿¿¿¿¿¿  ¿¿¿¿¿¿¿¿¿¿¿¿¿  ¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿
 
-Á´½Ó·û£º
-¡°*¡±´ú±íÈôÓÐµÈ¼¶ÈÕÖ¾
-¡°.¡±±ÈºóÃæµÄµÈ¼¶¸ßµÄ£¬°üº¬¸ÃµÈ¼¶
-¡°.=¡±µÈÓÚºóÃæµÈ¼¶£¬Ö»¼ÇÂ¼¸ÃµÈ¼¶
-¡°.!¡±´ú±í²»µÈÓÚ£¬³ýÁË¸ÃµÈ¼¶¶¼¼ÇÂ¼
+¿¿¿¿
+¿*¿¿¿¿¿¿¿¿¿
+¿.¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿.=¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿.!¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-ÈÕÖ¾µÈ¼¶£º
-debug      Ò»°ãµÄµ÷ÊÔÐÅÏ¢
-info       »ù±¾µÄÍ¨ÖªÐÅÏ¢
-notice     ÆÕÍ¨ÐÅÏ¢£¬µ«ÊÇÓÐÒ»¶¨µÄÖØÒªÐÔ
-warning    ¾¯¸æÐÅÏ¢£¬µ«ÊÇ»¹ÊÇ²»Ó°Ïì·þÎñ»òÏµÍ³µÄÔËÐÐ
-error      ´íÎóÐÅÏ¢£¬Ò»°ã»áÐÅÏ¢·þÎñÏµÍ³µÄÔËÐÐ
-crit       ÁÙ½ç×´Ì¬£¬±Èerror»¹ÑÏÖØ
-alert      ¾¯¸æ×´Ì¬£¬±Ècrit»¹ÒªÑÏÖØ¡£
-emerg      ÌÛÍ´µÈ¼¶ÐÅÏ¢£¬ÏµÍ³ÒÑ¾­ÎÞ·¨Ê¹ÓÃÁË¡£
+¿¿¿¿¿
+debug      ¿¿¿¿¿¿¿
+info       ¿¿¿¿¿¿¿
+notice     ¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+warning    ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+error      ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+crit       ¿¿¿¿¿¿error¿¿¿
+alert      ¿¿¿¿¿¿crit¿¿¿¿¿
+emerg      ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-ÈÕÖ¾¼ÇÂ¼Î»ÖÃ
-ÎÄ¼þ¾ø¶ÔÂ·¾¶ "/var/log/secure"
-ÏµÍ³Éè±¸ÎÄ¼þÃû£¬Èç´òÓ¡»ú  "/dev/lp0"
-×ª·¢¸øÔ¶³ÌÖ÷»ú "@192.168.0.210:514"
-ÓÃ»§Ãû£¬Èç¡°root¡±£¬Ç°ÌáÒªÊÇ¸ÃÓÃ»§ÒªÔÚÏß£¬·ñÔòÏëµ½Óë¶ªÆú
-ºöÂÔ»ò¶ªÆúÈÕÖ¾£¬Èç¡°~¡±
+¿¿¿¿¿¿
+¿¿¿¿¿¿ "/var/log/secure"
+¿¿¿¿¿¿¿¿¿¿¿¿  "/dev/lp0"
+¿¿¿¿¿¿¿ "@192.168.0.210:514"
+¿¿¿¿¿¿root¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿~¿
 
 vim /etc/rsyslog.conf 
 
-Èç¹ûÃ»ÓÐdateext²ÎÊý£¬µÚÒ»´ÎÂÖÌæÊ±secure»á±ä³Ésecure.1,ÐÂ½¨µÄÎªsecure£¬µ±µÚ¶þ´ÎÂÖÌæsecure1£¬±ä³Ésecure2£¬secure±ä³Ésecure1£¬ÐÂ½¨µÄÎªsecure
-ÓÐdateext²ÎÊýÊ±£¬¼ÓÉÏÈÕÆÚ
+¿¿¿¿dateext¿¿¿¿¿¿¿¿¿secure¿¿¿secure.1,¿¿¿¿secure¿¿¿¿¿¿¿secure1¿¿¿secure2¿secure¿¿secure1¿¿¿¿¿secure
+¿dateext¿¿¿¿¿¿¿¿
 
-logrotate ÅäÖÃÎÄ¼þ
-daily ÈÕÖ¾µÄÂÖÌæÖÜÆÚÊÇÃ¿Ìì
-weekly ÈÕÖ¾ÂÖÌæµÄÖÜÆÚÊÇÃ¿ÖÜ
-monthly ÈÕÖ¾ÂÖÌæµÄÖÜÆÚÊÇÃ¿ÔÂ
-compress ÈÕÖ¾ÂÖÌæÊ±£¬¾ÉµÄÈÕÖ¾½øÐÐÑ¹Ëõ
-rotate Êý×Ö ±£ÁôµÄÈÕÖ¾ÎÄ¼þµÄ¸öÊý¡£0Ö¸Ã»ÓÐ±¸·Ý
-create mode owner group ½¨Á¢ÐÂÈÕÖ¾£¬Í¬Ê±Ö¸¶¨ÐÂÈÕÖ¾µÄÈ¨ÏÞÓëËùÓÐÕßºÍËùÊô×é¡£Èçcreate 0600 root utmp
-mail address ÔÚÈÕÖ¾ÂÖÌæÊ±£¬Êä³öµÄÄÚÈÝÍ¨¹ýÓÊ¼þ·¢ËÍµ½Ö¸¶¨µÄµØÖ·¡£
-missingok Èç¹ûÈÕÖ¾²»´æÔÚ£¬ÔòºöÂÔ¸ÃÈÕÖ¾µÄ¾¯¸æÐÅÏ¢
-notifempty Èç¹ûÈÕÖ¾Îª¿ÕÎÄ¼þ£¬Ôò²»½øÐÐÈÕÖ¾ÂÖÌæ
-minszie ´óÐ¡ ÈÕÖ¾ÂÖÌæµÄ×îÐ¡Öµ¡£Ò²¾ÍÊÇÈÕÖ¾Ò»¶¨Òªµ½´ïÕâ¸ö×îÐ¡Öµ²Å»áÂÖÌæ£¬·ñÔò¾ÍËãµ½Ê±¼äÒ²²»ÂÖÌæ
-size ´óÐ¡ ÈÕÖ¾Ö»ÓÐ´óÓÚÖ¸¶¨´óÐ¡²Å½øÐÐÈÕÖ¾ÂÖÌæ£¬¶ø²»ÊÇ°´ÕÕÊ±¼äÂÖÌæ¡£Èçsize 100k
-dateext Ê¹ÓÃÈÕÆÚ×÷ÎªÈÕÖ¾ÂÖÌæµÄºó×º£¬Èçsecure-20130605
+logrotate ¿¿¿¿
+daily ¿¿¿¿¿¿¿¿¿¿
+weekly ¿¿¿¿¿¿¿¿¿¿
+monthly ¿¿¿¿¿¿¿¿¿¿
+compress ¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+rotate ¿¿ ¿¿¿¿¿¿¿¿¿¿¿0¿¿¿¿¿
+create mode owner group
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿create 0600 root utmp
+mail address ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+missingok ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+notifempty ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+minszie ¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+size ¿¿ ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿size 100k
+dateext ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿secure-20130605
 
-logrotate [Ñ¡Ïî] ÅäÖÃÎÄ¼þÃû
-          -v               ÏÔÊ¾ÈÕÖ¾ÂÖÌæÏêÇé
-          -f               Ç¿ÖÆ½øÐÐÈÕÖ¾ÂÖÌæ£¬²»¹ÜÈÕÖ¾ÂÖÌæÌõ¼þÊÇ·ñÒÑ¾­·ûºÏ£¬Ç¿ÖÆ¶ÔÅäÖÃÎÄ¼þÖÐµÄËµÓÐÈÕÖ¾½øÐÐÂÖÌæ
+logrotate [¿¿] ¿¿¿¿¿
+          -v               ¿¿¿¿¿¿¿¿
+          -f
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-Linux ÔËÐÐ¼¶±ð2£¬3ÉÙÁËÒ»¸öNFS·þÎñ
-NFS:Network File System ¼´ÍøÂçÎÄ¼þÏµÍ³£¬ÊÇFreeBSDÖ§³ÖµÄÎÄ¼þÏµÍ³ÖÐµÄÒ»ÖÖ£¬ËüÔÊÐíÍøÂçÖÐµÄ¼ÆËã»úÖ®¼äÍ¨¹ýTCP/IPÍøÂç¹²Ïí×ÊÔ´¡£ÔÚNFSµÄÓ¦ÓÃÖÐ£¬
-    ±¾µØNFSµÄ¿Í»§¶ËÓ¦ÓÃ¿ÉÒÔÍ¸Ã÷µØ¶ÁÐ´Î»ÓÚÔ¶¶ËNFS·þÎñÆ÷ÉÏµÄÎÄ¼þ£¬¾ÍÏñ·ÃÎÊ±¾µØÎÄ¼þÒ»Ñù¡£
+Linux ¿¿¿¿2¿3¿¿¿¿NFS¿¿
+NFS:Network File System
+¿¿¿¿¿¿¿¿¿FreeBSD¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿TCP/IP¿¿¿¿¿¿¿¿NFS¿¿¿¿¿
+    ¿¿NFS¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿NFS¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-CMOS:Complementary Metal Oxide Semiconductor,»¥²¹½ðÊôÑõ»¯Îï°ëµ¼Ìå¡£
+CMOS:Complementary Metal Oxide Semiconductor,¿¿¿¿¿¿¿¿¿¿¿
 
-BIOS:Basic Input Output System,ËüÊÇÒ»×é¹Ì»¯µ½¼ÆËã»úÄÚÖ÷°åÉÏÒ»¸öROMÐ¾Æ¬ÉÏµÄ³ÌÐò£¬Ëü±£´æ×Å¼ÆËã»ú×îÖØÒªµÄ»ù±¾ÊäÈëÊä³öµÄ³ÌÐò¡¢¿ª»úºó×Ô¼ì³ÌÐòºÍÏµÍ³×ÔÆô¶¯³ÌÐò£¬
-     Ëü¿É´ÓCMOSÖÐ¶ÁÐ´ÏµÍ³ÉèÖÃµÄ¾ßÌåÐÅÏ¢¡£ ÆäÖ÷Òª¹¦ÄÜÊÇÎª¼ÆËã»úÌá¹©×îµ×²ãµÄ¡¢×îÖ±½ÓµÄÓ²¼þÉèÖÃºÍ¿ØÖÆ¡£
+BIOS:Basic Input Output
+System,¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿ROM¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+     ¿¿¿CMOS¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-MBR:Ö÷Òýµ¼¼ÇÂ¼(Master Boot Record),ÆäÖÐ±£´æ×ÅÆô¶¯Òýµ¼³ÌÐò£¨GRUB£©¡£
+MBR:¿¿¿¿¿(Master Boot Record),¿¿¿¿¿¿¿¿¿¿¿¿GRUB¿¿
 
-LinuxÆô¶¯Á÷³Ì£º
+Linux¿¿¿¿¿
 
-    ¼ÓÔØ    ¼ÓÔØ                     µ÷ÓÃÆäËû·ÖÇøµÄÆô¶¯ÉÈÇøµÄÆô¶¯Òýµ¼³ÌÐò£¨¼°¼ÓÔØboot·ÖÇø£©
-BIOS---->MBR----->MBRÖÐµÄÆô¶¯Òýµ¼³ÌÐò----------------------------------------------------->¼ÓÔØÄÚºË
+    ¿¿    ¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿boot¿¿¿
+BIOS---->MBR----->MBR¿¿¿¿¿¿¿¿----------------------------------------------------->¿¿¿¿
 
-                £¨²»ÄÜÖ±½Ó¼ÓÔØ/lib£©ËÑË÷                                                               
------>ÄÚºË½âÑ¹×Ô¼ì---------------------->ÕÒµ½initramfs£¨ÔÚboot·ÖÇøÖÐ£©-->½¨Á¢·ÀÕæ¸ùÄ¿Â¼-->¼ÓÔØÇý¶¯-->
+                ¿¿¿¿¿¿¿/lib¿¿¿                                                               
+----->¿¿¿¿¿¿---------------------->¿¿initramfs¿¿boot¿¿¿¿-->¿¿¿¿¿¿¿-->¿¿¿¿-->
 
-                  µ÷ÓÃ            µ÷ÓÃ                    µ÷ÓÃ(/etc/rc.d/rc.sysinit½øÐÐÏµÍ³³õÊ¼»¯)                
-¹ÒÔØÕæÕýÏµÍ³¸ùÄ¿Â¼---->/sbin/init------>/etc/init/rcS.conf---------------------------------------->
+                  ¿¿            ¿¿
+¿¿(/etc/rc.d/rc.sysinit¿¿¿¿¿¿¿)                
+¿¿¿¿¿¿¿¿¿---->/sbin/init------>/etc/init/rcS.conf---------------------------------------->
 
-           ´«ÈëÔËÐÐ¼¶±ð                   µ÷ÓÃ               °´ÕÕÔËÐÐ¼¶±ðµ÷ÓÃ                                                  
+           ¿¿¿¿¿¿                   ¿¿               ¿¿¿¿¿¿¿¿                                                  
 /etc/inttab------------>/etc/init/rc.conf------->/etc/rc.d/rc---------------->/etc/rc[0-6].d-->
 
-                        Æô¶¯ºÍ¹Ø±Õ                                      ÊäÈëÓÃ»§ÃûºÍÃÜÂë
-°´ÕÕÓÅÏÈ¼¶Æô¶¯ºÍ¹Ø±Õ½Å±¾---------->/ect/rc.d/rc.localÖÐµÄ³ÌÐò-->µÇÂ¼½çÃæ---------------->½øÈëÏµÍ³£¡
+                        ¿¿¿¿¿
+¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿---------->/ect/rc.d/rc.local¿¿¿¿-->¿¿¿¿---------------->¿¿¿¿¿
 
-windowsºÍLinux²¢´æÊ±Ó¦¸ÃÏÈ×°windowºó×°Linux£¬ÒòÎªwindowsµÄgrub»á¸²¸ÇLinuxµÄgrubµ¼ÖÂLinux²»ÄÜÆô¶¯£¬Linux¿ÉÒÔÊ¶±ðwindowsµÄgrub£¬»á½«Æä¼Óµ½×Ô¼ºµÄgrubÖÐ¡£
+windows¿Linux¿¿¿¿¿¿¿window¿¿Linux¿¿¿windows¿grub¿¿¿Linux¿grub¿¿Linux¿¿¿¿¿Linux¿¿¿¿windows¿grub¿¿¿¿¿¿¿¿¿grub¿¿
 
-ÐÞ¸ÄÖ÷»úÃûhostname   vim /etc/sysconfig/network
-ÐÞ¸ÄµÇÂ¼»¶Ó­Óï       vim /etc/motd
+¿¿¿¿¿hostname   vim /etc/sysconfig/network
+¿¿¿¿¿¿¿       vim /etc/motd
 
-shell  ¼´ÃüÁî½âÊÍÆ÷£¨Íâ²ãÓ¦ÓÃ³ÌÐò--shellÃüÁî½âÊÍÆ÷--ÄÚºË--Ó²¼þ£©(½âÊÍÐÍÓïÑÔ£¬¿ÉÒÔÖ±½Óµ÷ÓÃLinuxÏµÍ³ÃüÁî)
-shell ·ÖÀà
-Bourne Shell£¬Ö÷ÎÄ¼þÃûÎªsh
-C Shell ,Ö÷ÒªÓÃBSD°æ±¾µÄUnixÏµÍ³ÖÐ£¬Óï·¨ºÍCÓïÑÔÀàËÆ¡£
-ÎÒÃÇËµµÄLinuxÖÐµÄshellÎªBourne Shell ÖÐµÄBash£¨BashÓësh¼æÈÝ£©
+shell
+¿¿¿¿¿¿¿¿¿¿¿¿¿--shell¿¿¿¿¿--¿¿--¿¿¿(¿¿¿¿¿¿¿¿¿¿¿¿Linux¿¿¿¿)
+shell ¿¿
+Bourne Shell¿¿¿¿¿¿sh
+C Shell ,¿¿¿BSD¿¿¿Unix¿¿¿¿¿¿¿C¿¿¿¿¿
+¿¿¿¿Linux¿¿shell¿Bourne Shell ¿¿Bash¿Bash¿sh¿¿¿
 
-cat /etc/shells  ²é¿´ÏµÍ³Ö§³ÖµÄshell
-¿ÉÒÔÍ¨¹ý sh/bash/tcsh/csh   ½øÐÐÇÐ»»
+cat /etc/shells  ¿¿¿¿¿¿¿shell
+¿¿¿¿ sh/bash/tcsh/csh   ¿¿¿¿
  
-echo [Ñ¡Ïî] [Êä³öµÄÄÚÈÝ]                        Êä³öÃüÁî
-     -e                                         Ö§³Ö·´Ð±Ïß¿ØÖÆµÄ×Ö·û×ª»»
+echo [¿¿] [¿¿¿¿¿]                        ¿¿¿¿
+     -e                                         ¿¿¿¿¿¿¿¿¿¿¿¿
 
-\t      ÖÆ±í·û
-\n      »»ÐÐ·û
-\0      °Ë½øÖÆ
-\x      Ê®Áù½øÖÆ
-\e      ÑÕÉ«Êä³ö                                echo -e "\e[1;31m abcd \e[0m"
+\t      ¿¿¿
+\n      ¿¿¿
+\0      ¿¿¿
+\x      ¿¿¿¿
+\e      ¿¿¿¿                                echo -e "\e[1;31m abcd \e[0m"
 
-cat -A           ²é¿´ËùÓÐ×Ö·û,°üÀ¨»»ÐÐµÄ±íÊ¾·û
+cat -A           ¿¿¿¿¿¿,¿¿¿¿¿¿¿¿
 
-ÓÃ»§¼ÒÄ¿Â¼/.bash_history                        ÀúÊ·ÃüÁî±£´æÄ¿Â¼
-history [Ñ¡Ïî] [ÀúÊ·ÃüÁî±£´æÎÄ¼þ]
-        -c                           Çå¿ÕÀúÊ·ÃüÁî
-        -w                           °Ñ»º´æµÄÀúÊ·ÃüÁîÐ´ÈëÀúÊ·ÃüÁî±£´æÎÄ¼þ
+¿¿¿¿¿/.bash_history                        ¿¿¿¿¿¿¿¿
+history [¿¿] [¿¿¿¿¿¿¿¿]
+        -c                           ¿¿¿¿¿¿
+        -w                           ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-/etc/profile         »·¾³±äÁ¿ÅäÖÃÎÄ¼þ£¨¿ÉÒÔÐÞ¸ÄÀúÊ·ÃüÁî±£´æµÄ¸öÊý£©
+/etc/profile         ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-!n ÖØ¸´Ö´ÐÐµÚnÌõÃüÁî
-!! ÖØ¸´Ö´ÐÐÉÏÒ»ÌõÃüÁî
-!×Ö´® Ö´ÐÐÉÏÒ»ÌõÒÔ¡®×Ö·û´®¡¯¿ªÍ·µÄÃüÁî
+!n ¿¿¿¿¿n¿¿¿
+!! ¿¿¿¿¿¿¿¿¿
+!¿¿ ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-alias ¸öÃüÁîÆð±ðÃû
-alias ±ðÃû="Ô­ÃüÁî"
+alias ¿¿¿¿¿¿
+alias ¿¿="¿¿¿"
 
-ÃüÁîÖ´ÐÐË³Ðò£º
-1.¾ø¶ÔÂ·¾¶
-2.±ðÃû
-3.BashµÄÄÚ²¿ÃüÁî
-4.Í¨¹ý$path ÕÒµ½µÄÍâ²¿ÃüÁî
+¿¿¿¿¿¿¿
+1.¿¿¿¿
+2.¿¿
+3.Bash¿¿¿¿¿¿¿shell¿¿¿¿¿¿
+4.¿¿$path ¿¿¿¿¿¿¿
 
-ÈÃ±ðÃûÓÀ¾ÃÉúÐ§
-vi /¼ÒÄ¿Â¼/.bashrc
+¿¿¿¿¿¿¿
+vi /¿¿¿/.bashrc
 
-Bash ³£ÓÃ¿ì½Ý¼ü
-Ctrl + A ¹â±êÒÆµ½¿ªÍ·
-Ctrl + E ¹â±êÒÆµ½½áÎ²
-Ctrl + C Ç¿ÖÆÖÕÖ¹µ±Ç°ÃüÁî
-Ctrl + L ÇåÆÁ
-Ctrl + U É¾³ý/¼ôÇÐ¹â±êÖ®Ç°µÄÄÚÈÝ
-Ctrl + K É¾³ý/¼ôÇÐ¹â±êÖ®ºóµÄÄÚÈÝ
-Ctrl + Y ð¤Ìù
-Ctrl + R ËÑË÷
-Ctrl + D ÍË³öµ±Ç°ÖÕ¶Ë
-Ctrl + Z ÔÝÍ££¬²¢·ÅÈëºóÌ¨¡£
-Ctrl + S ÔÝÍ£ÆÁÄ»Êä³ö
-Ctrl + Q »Ö¸´ÆÁÄ»Êä³ö
+Bash ¿¿¿¿¿
+Ctrl + A ¿¿¿¿¿¿
+Ctrl + E ¿¿¿¿¿¿
+Ctrl + C ¿¿¿¿¿¿¿¿
+Ctrl + L ¿¿
+Ctrl + U ¿¿/¿¿¿¿¿¿¿¿¿
+Ctrl + K ¿¿/¿¿¿¿¿¿¿¿¿
+Ctrl + Y ¿¿
+Ctrl + R ¿¿
+Ctrl + D ¿¿¿¿¿¿
+Ctrl + Z ¿¿¿¿¿¿¿¿¿
+Ctrl + S ¿¿¿¿¿¿
+Ctrl + Q ¿¿¿¿¿¿
 
-Éè±¸    Éè±¸ÎÄ¼þÃû     ÎÄ¼þÃèÊö·û        ÀàÐÍ
-¼üÅÌ    /dev/stdin     0                 ±ê×¼ÊäÈë
-ÏÔÊ¾Æ÷  /dev/stdout    1                 ±ê×¼Êä³ö
-ÏÔÊ¾Æ÷  /dev/stderr    2                 ±ê×¼´íÎóÊä³ö
+¿¿    ¿¿¿¿¿     ¿¿¿¿¿        ¿¿
+¿¿    /dev/stdin     0                 ¿¿¿¿
+¿¿¿  /dev/stdout    1                 ¿¿¿¿
+¿¿¿  /dev/stderr    2                 ¿¿¿¿¿¿
 
-Êä³öÖØ¶¨Ïò
-±ê×¼Êä³öÖØ¶¨Ïò            ÃüÁî  > ÎÄ¼þ        ( >¸²¸Ç >>×·¼Ó£©
-±ê×¼´íÎóÊä³öÖØ¶¨Ïò    ´íÎóÃüÁî 2> ÎÄ¼þ
-Í¬Ê±±£´æ              ÃüÁî > ÎÄ¼þ 2>&1
-                      ÃüÁî &> ÎÄ¼þ
-                      ÃüÁî >> ÎÄ¼þ1 2 >> ÎÄ¼þ2   ÕýÈ·×·¼Óµ½ÎÄ¼þ1£¬´íÎó×·¼Óµ½ÎÄ¼þ2
-ls &>/dev/null        ¶ªÆúÊä³ö
+¿¿¿¿¿
+¿¿¿¿¿¿¿            ¿¿  > ¿¿        ( >¿¿ >>¿¿¿
+¿¿¿¿¿¿¿¿¿    ¿¿¿¿ 2> ¿¿
+¿¿¿¿              ¿¿ > ¿¿ 2>&1
+                      ¿¿ &> ¿¿
+                      ¿¿ >> ¿¿1 2 >> ¿¿2
+¿¿¿¿¿¿¿1¿¿¿¿¿¿¿¿2
+ls &>/dev/null        ¿¿¿¿
 
-wc [Ñ¡Ïî] [ÎÄ¼þÃû]
-   -c                 Í³¼Æ×Ö·û
-   -w                 Í³¼Æµ¥´ÊÊý
-   -l                 Í³¼ÆÐÐÊý
+wc [¿¿] [¿¿¿]
+   -c                 ¿¿¿¿
+   -w                 ¿¿¿¿¿
+   -l                 ¿¿¿¿
 
 wc </etc/passwd
 
-¶àÃüÁîË³ÐòÖ´ÐÐ
-Ö´ÐÐ·û             ¸ñÊ½                        ×÷ÓÃ
-;                  ÃüÁî1;ÃüÁî2                 ÎÞÂß¼­¹ØÏµ
-&&                 ÃüÁî1&&ÃüÁî2                µ±ÃüÁî1ÕýÈ·Ö´ÐÐ²ÅÖ´ÐÐÃüÁî2
-||                 ÃüÁî1||ÃüÁî2                µ±ÃüÁî1´íÎóÖ´ÐÐÊ±²ÅÖ´ÐÐÃüÁî2
+¿¿¿¿¿¿¿
+¿¿¿             ¿¿                        ¿¿
+;                  ¿¿1;¿¿2                 ¿¿¿¿¿
+&&                 ¿¿1&&¿¿2                ¿¿¿1¿¿¿¿¿¿¿¿¿2
+||                 ¿¿1||¿¿2                ¿¿¿1¿¿¿¿¿¿¿¿¿¿2
 
-grep [Ñ¡Ïî] "ËÑË÷ÄÚÈÝ" ÎÄ¼þÃû 
-     -i                           ºöÂÔ´óÐ¡Ð´
-     -n                           ÏÔÊ¾ÐÐºÅ
-     -v                           ·´Ïò²éÕÒ
-     --color=auto                 ËÑË÷³öµÄ¹Ø¼ü×ÖÓÃÑÕÉ«ÏÔÊ¾
+grep [¿¿] "¿¿¿¿" ¿¿¿ 
+     -i                           ¿¿¿¿¿
+     -n                           ¿¿¿¿
+     -v                           ¿¿¿¿
+     --color=auto                 ¿¿¿¿¿¿¿¿¿¿¿¿
 
-Í¨Åä·û
-?       Æ¥ÅäÒ»¸öÈÎÒâ×Ö·û
-*       0¸ö»òÈÎÒâ¸öÈÎÒâ×Ö·û
-[]      []ÖÐµÄÈÎÒâÒ»¸ö×Ö·û
-[-]     ·¶Î§Èça-z
-[^]     Æ¥Åä²»ÊÇ...(È¡·´)
+¿¿¿
+?       ¿¿¿¿¿¿¿¿
+*       0¿¿¿¿¿¿¿¿¿
+[]      []¿¿¿¿¿¿¿¿¿[abc] abc¿¿¿¿¿¿
+[-]     ¿¿¿a-z
+[^]     ¿¿¿¿...(¿¿)
 
-Bash ÖÐÆäËûÌØÊâ×Ö·ûºÅ
-''   Ö®ÖÐµÄÌØÊâ·ûºÅÎÞÌØÊâº¬Òå
-""   ÌØÊâ·ûºÅÓÐÌØÊâÒâÒå
-``   ·´ÒýºÅºÍ $(ÃüÁî) ÀàËÆ ÏÈÖ´ÐÐÃüÁî
-$()  ÏÈÖ´ÐÐÀ¨ºÅÄÚµÄÃüÁî
-#    #¿ªÍ·µÄÐÐ´ú±í×¢ÊÍ
-$    ÓÃÓÚµ÷ÓÃ±äÁ¿µÄÖµ
-\    ×ªÒå·û
+Bash ¿¿¿¿¿¿¿¿
+''   ¿¿¿¿¿¿¿¿¿¿¿¿
+""   ¿¿¿¿¿¿¿¿¿
+``   ¿¿¿¿ $(¿¿) ¿¿ ¿¿¿¿¿
+$()  ¿¿¿¿¿¿¿¿¿
+#    #¿¿¿¿¿¿¿¿
+$    ¿¿¿¿¿¿¿¿
+\    ¿¿¿
 
 
-±äÁ¿¶¨Òå¹æÔò
-¿ÉÒÔÓÉ×ÖÄ¸¡¢Êý×ÖºÍÏÂ»®Ïß×é³É£¬²»ÄÜÒÔÊý×Ö¿ªÍ·¡£
-ÔÚBashÖÐ£¬±äÁ¿µÄÄ¬ÈÏÀàÐÍ¶¼ÊÇ×Ö·û´®ÀàÐÍ£¬Èç¹ûÒª½øÐÐÊýÖµÔËËã£¬Ôò±ØÐëÖ¸¶¨±äÁ¿µÄÀàÐÍÎªÊýÖµ
-±äÁ¿ÓÃµÈºÅÁ´½Ó£¬µÈºÅ×óÓÒÁ½²à²»ÄÜÓÐ¿Õ¸ñ
-±äÁ¿µÄÖµÈç¹ûÓÐ¿Õ¸ñ£¬ÐèÒªÓÃ""»ò''
-ÔÚ±äÁ¿µÄÖµÖÐ£¬¿ÉÒÔÊ¹ÓÃ"\"×ªÒå
-Èç¹ûÐèÒªÔö¼Ó±äÁ¿µÄÖµ£¬ÄÇÃ´¿ÉÒÔ½øÐÐ±äÁ¿ÖµµÃµþ¼Ó¡£²»¹ý±äÁ¿ÐèÒªÓÃË«ÒýºÅ°üº¬"$±äÁ¿Ãû"»òÓÃ${±äÁ¿Ãû}°üº¬  aa=$(aa)789»òaa="$aa"456
-Èç¹ûÊÇ°ÑÃüÁîµÄ½á¹û×÷Îª±äÁ¿¸³ÖµÓè±äÁ¿£¬ÔòÐèÒªÊ¹ÓÃ`` »ò $()
-»·¾³±äÁ¿Ãû½¨Òé´óÐ´£¬±ãÓÚÇø·Ö¡£
+¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿Bash¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿""¿''
+¿¿¿¿¿¿¿¿¿¿¿"\"¿¿
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿"$¿¿¿"¿¿${¿¿¿}¿¿
+aa=$(aa)789¿aa="$aa"456
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿`` ¿ $()
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-±äÁ¿·ÖÀà
-1.ÓÃ»§×Ô¶¨Òå±äÁ¿
-2.»·¾³±äÁ¿
-3.Î»ÖÃ²ÎÊý±äÁ¿    ²»ÄÜ×Ô¶¨Òå
-4.Ô¤¶¨Òå±äÁ¿      BashÖÐÒÑ¾­¶¨ÒåºÃµÄ¡£±äÁ¿²»ÄÜ×Ô¶¨Òå£¬±äÁ¿µÄ×÷ÓÃÒ²ÊÇ¹Ì¶¨µÄ¡£
+¿¿¿¿
+1.¿¿¿¿¿¿¿
+2.¿¿¿¿
+3.¿¿¿¿¿¿    ¿¿¿¿¿
+4.¿¿¿¿¿      Bash¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
 
-set ²é¿´ËùÓÐ±äÁ¿
-unset ±äÁ¿Ãû³Æ    É¾³ý±äÁ¿
+set ¿¿¿¿¿¿
+unset ¿¿¿¿    ¿¿¿¿
 
-ÉèÖÃ»·¾³±äÁ¿
-export ±äÁ¿Ãû=±äÁ¿Öµ   ÉêÃ÷»·¾³±äÁ¿
-env                    ²é¿´»·¾³±äÁ¿
+¿¿¿¿¿¿
+export ¿¿¿=¿¿¿   ¿¿¿¿¿¿
+env                    ¿¿¿¿¿¿
 
 PATH
 PS1
 
-Î»ÖÃ²ÎÊý
-$n  ($0´ú±íÃüÁî±¾Éí£¬$1µÚÒ»¸ö²ÎÊý£¬$2µÚ¶þ¸ö²ÎÊý) £¨n=0-9)
-$* ËùÓÐ²ÎÊý,°ÑËùÓÐ²ÎÊýµ±³õÒ»¸öÕûÌå
-$@ ËùÓÐ²ÎÊý,°ÑÃ¿¸ö²ÎÊý¶¼Çø±ð¶Ô´ý
-$# ´ú±íÃüÁîÐÐÖÐËùÓÐµÄ²ÎÊýµÄ¸öÊý
-
-Ô¤¶¨Òå±äÁ¿
-$? ½ÓÊÕºÍÅÐ¶ÏÉÏÒ»ÌõÃüÁîÊÇ·ñÕýÈ·Ö´ÐÐ $?==0ÉÏÒ»ÌõÃüÁîÕýÈ·Ö´ÐÐ£¬$?!=0ÉÏÒ»ÌõÃüÁîÎ´ÕýÈ·Ö´ÐÐ
-$$ µ±Ç°½ø³ÌµÄPID
-$! ºóÌ¨ÔËÐÐµÄ×îºóÒ»¸ö½ø³ÌµÄPID
-
-½ÓÊÕ¼üÅÌÊäÈë
-read [Ñ¡Ïî]           [±äÁ¿Ãû]
-     -p "ÌáÊ¾ÐÅÏ¢"
-     -t ÃëÊý                     Éè¶¨µÈ´ýÊ±¼ä
-     -n ×Ö·ûÊý                   ½ÓÊÕµ½Ö¸¶¨µÄ×Ö·ûÊý£¬¾Í»áÖ´ÐÐ
-     -s                          Òþ²ØÊäÈëµÄÊý¾Ý£¬ÊÊÓÃÓÚ»úÃÜÐÅÏ¢ÊäÈë
-#!/bin/bash
-#chen
-read -t 30 -p "please input you name:" name
-echo "Name is $name"
-read -s -t 30 -p "please input you age:" age
-echo -e "\n"
-echo "Age is $age"
-read -n 1 -t 30 -p "please select your gender[M/F]:"gender
-echo -e "\n"
-echo "Sex is $gender"
-
-declare ÉùÃ÷±äÁ¿ÀàÐÍ
-declare [+/-]   [Ñ¡Ïî] ±äÁ¿Ãû
-        +                       ¸ø±äÁ¿Éè¶¨ÀàÐÍÊôÐÔ
-        -                       È¡Ïû±äÁ¿µÄÀàÐÍÊôÐÔ £¨ÌØÊâ£©
-		 -i             ½«±äÁ¿ÉèÖÃÎªÕûÐÎ
-                 -x             ½«±äÁ¿ÉùÃ÷Îª»·¾³±äÁ¿
-                 -p             ÏÔÊ¾Ö¸¶¨±äÁ¿µÄ±»ÉùÃ÷µÄÀàÐÍ
-
-cut -f 1 -d : /etc/passwd
-    -b    ÒÔ×Ö½ÚÇø·Ö
-    -c    ÒÔ×Ö·ûÇø·Ö
-    -f    ÒÔ×Ö¶ÎÇø·Ö
 
 
-printf
-awk
-sed
-
-sort -t ":" -k 3,3 /etc/password     ÓÃµÚÈý¸ö×Ö¶ÎÅÅÐò
-
-
-
-ÔÚä¯ÀÀÆ÷µØÖ·À¸ÊäÈëÒ»¸öURLºó»Ø³µ£¬½«»á·¢ÉúµÄÊÂÇé£¿
+¿¿¿¿¿¿¿¿¿¿¿URL¿¿¿¿¿¿¿¿¿¿¿¿
 http://blog.csdn.net/libin_1/article/details/50778993
-1¡¢ä¯ÀÀÆ÷µÄurlÇëÇó
-1+¡¢²éÑ¯±¾µØhostÎÄ¼þ
-2¡¢µÝ¹éÑ°ÕÒDNS·þÎñÆ÷
-3¡¢Á¬½ÓÄ¿±êIP²¢½¨Á¢TCPÁ¬½Ó
-4¡¢ÏòÄ¿±ê·þÎñÆ÷·¢ËÍhttpÇëÇó
-5¡¢web·þÎñÆ÷½ÓÊÕÇëÇóºó´¦Àí
-6¡¢web·þÎñÆ÷·µ»ØÏàÓ¦µÄ½á¹û¡¾ÎÞÐ§¡¢ÖØ¶¨Ïò¡¢ÕýÈ·Ò³ÃæµÈ¡¿
-7¡¢ä¯ÀÀÆ÷½ÓÊÕ·µ»ØµÄhttpÄÚÈÝ
-================================Ç°¶Ë½âÎö·Ö¸îÏß===========================================
-8¡¢¿ªÊ¼½âÎöhtmlÎÄ¼þ£¬µ±È»ÊÇ×ÔÉÏ¶øÏÂ£¬ÏÈÊÇÍ·²¿£¬ºóÊÇbody
-9¡¢µ±½âÎöµ½Í·²¿cssÍâ²¿Á´½ÓÊ±£¬Í¬²½È¥ÏÂÔØ£¬Èç¹ûÓöµ½Íâ²¿jsÁ´½ÓÒ²ÊÇÏÂÔØ¡¾²»¹ýjsÁ´½Ó²»½¨Òé·ÅÔÚÍ·²¿£¬ÒòÎªµ¢ÎóÒ³ÃæµÚÒ»Õ¹ÏÖÊ±¼ä¡¿
-10¡¢½Ó×Å½âÎöbody²¿·Ö£¬±ß½âÎö±ß¿ªÊ¼Éú³É¶ÔÓ¦µÄDOMÊ÷£¬Í¬Ê±µÈ´ýcssÎÄ¼þÏÂÔØ
-11¡¢Ò»µ©cssÎÄ¼þÏÂÔØÍê±Ï£¬ÄÇÃ´¾ÍÍ¬²½È¥ÓÃÒÑ¾­Éú³ÉµÄDOM½Úµã+CSSÈ¥Éú³ÉäÖÈ¾Ê÷
-12¡¢äÖÈ¾Ê÷Ò»µ©ÓÐ½á¹¹Ä£ÐÍÁË£¬½Ó×Å¾Í»áÍ¬²½È¥¼ÆËãäÖÈ¾Ê÷½ÚµãµÄ²¼¾ÖÎ»ÖÃ
-13¡¢Ò»µ©¼ÆËã³öÀ´äÖÈ¾µÄ×ø±êºó£¬ÓÖÍ¬²½È¥¿ªÊ¼äÖÈ¾
-14¡¢10-13²½½øÐÐ¹ý³ÌÖÐÈç¹ûÓöµ½Í¼Æ¬ÔòÌø¹ýÈ¥äÖÈ¾ÏÂÃæÄÚÈÝ£¬µÈ´ýÍ¼Æ¬ÏÂÔØ³É¹¦ºó»á·µ»ØÀ´ÔÚäÖÈ¾Ô­À´Í¼Æ¬µÄÎ»ÖÃ
-15¡¢Í¬14²½£¬Èç¹ûäÖÈ¾¹ý³ÌÖÐ³öÏÖjs´úÂëµ÷ÕûDOMÊ÷»ú¹¹µÄÇé¿ö£¬Ò²»áÔÙ´ÎÖØÐÂÀ´¹ý£¬´ÓÐÞ¸ÄDOMÄÇ²½¿ªÊ¼
-16¡¢×îÖÕËùÓÐ½ÚµãºÍ×ÊÔ´¶¼»áäÖÈ¾Íê³É
-=========================================·ÖÎö½áÊø·Ö¸îÏß==============================================
-17¡¢äÖÈ¾Íê³Éºó¿ªÊ¼pageµÄonloadÊÂ¼þ
-18¡¢Õû¸öÒ³ÃæloadÍê³É
+1¿¿¿¿¿url¿¿
+1+¿¿¿¿¿host¿¿
+2¿¿¿¿¿DNS¿¿¿
+3¿¿¿¿¿IP¿¿¿TCP¿¿
+4¿¿¿¿¿¿¿¿¿http¿¿
+5¿web¿¿¿¿¿¿¿¿¿¿
+6¿web¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+7¿¿¿¿¿¿¿¿¿http¿¿
+================================¿¿¿¿¿¿¿===========================================
+8¿¿¿¿¿html¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿body
+9¿¿¿¿¿¿¿css¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿js¿¿¿¿¿¿¿¿¿js¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+10¿¿¿¿¿body¿¿¿¿¿¿¿¿¿¿¿¿¿¿DOM¿¿¿¿¿¿css¿¿¿¿
+11¿¿¿css¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿DOM¿¿+CSS¿¿¿¿¿¿
+12¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+13¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+14¿10-13¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+15¿¿14¿¿¿¿¿¿¿¿¿¿¿js¿¿¿¿DOM¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿DOM¿¿¿¿
+16¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+=========================================¿¿¿¿¿¿¿==============================================
+17¿¿¿¿¿¿¿¿page¿onload¿¿
+18¿¿¿¿¿load¿¿
 
-httpÐ­Òé
-ÇëÇóÍ·£º
-Accept:               [±íÊ¾¿Í»§¶Ë¿ÉÒÔ½ÓÊÜµÄÊý¾ÝÀàÐÍ]
-Referer               [±íÊ¾ÎÒ´ÓÄÄÀïÀ´]
-Accept-Language:      [Ò³ÃæÓïÑÔ]
-User-Agent:           [¸æËß·þÎñÆ÷ÎÒµÄä¯ÀÀÆ÷µÄÄÚºË£¬²Ù×÷ÏµÍ³]
-Accept-Encoding:      [±íÊ¾½ÓÊÜÊ²Ã´ÑùµÄÊý¾ÝÑ¹Ëõ¸ñÊ½]
-Host:                 [Ö÷»ú]
-Connection:Keep-Alive [±íÊ¾³¤Á´½Ó£¬²»ÒªÁ¢Âí¶Ï¿ªÇëÇó]
+http¿¿
+¿¿¿¿
+Accept:               [¿¿¿¿¿¿¿¿¿¿¿¿¿¿]
+Referer               [¿¿¿¿¿¿¿]
+Accept-Language:      [¿¿¿¿]
+User-Agent:           [¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿]
+Accept-Encoding:      [¿¿¿¿¿¿¿¿¿¿¿¿¿¿]
+Host:                 [¿¿]
+Connection:Keep-Alive [¿¿¿¿¿¿¿¿¿¿¿¿¿¿]
 
-ÏìÓ¦Í·:
+¿¿¿:
 HTTP
 Server
-Date:                 [×ÊÔ´¸üÐÂÊ±¼ä]
-Expires:-1            [½ûÓÃcache]
+Date:                 [¿¿¿¿¿¿]
+Expires:-1            [¿¿cache]
 Pragma:no-cache
 Cache-Control:no-cache
 
-ÎÄ¼þ£º
-  ÎÄ¼þÀàÐÍ£º 
-    ÎÄ±¾ÎÄ¼þ:txt
-    ¶þ½øÖÆÎÄ¼þ:ÊÓÆµ¡¢ÒôÆµ¡¢Í¼Æ¬
+¿¿¿
+  ¿¿¿¿¿ 
+    ¿¿¿¿:txt
+    ¿¿¿¿¿:¿¿¿¿¿¿¿¿
 
-ÔÚphpÖÐ
-final class ²»ÄÜ±»¼Ì³Ð
-final function ²»ÄÜ±»ÖØÐ´
-final ²»ÄÜÐÞÉí³ÉÔ±ÊôÐÔ
-const aa = 123; const ¶¨ÒåÒ»¸ö³£Á¿±ØÐë¸³³õÖµ¡£²»ÐèÒª¼Ópublic¡¢private¡¢protected ÐÞÊÎ·û¡£ÔÚ³ÉÔ±ÊôÐÔÊ±£¬ºÍ¾²Ì¬ÊôÐÔÒ»Ñù£¬ÊÇÊôÓÚÀà¡£
-ÔÚÄÚ²¿¿ÉÒÔÓÃself::  »òÀàÃû:: À´·ÃÎÊ
-ÔÚÍâ²¿Ö»ÄÜÓÃ ÀàÃû::  
-²»ÄÜÓÃ$this->  ·ÃÎÊ¡£
+¿php¿
+final class ¿¿¿¿¿
+final function ¿¿¿¿¿
+final ¿¿¿¿¿¿¿¿
+const aa = 123; const
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿public¿private¿protected
+¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿¿self::  ¿¿¿:: ¿¿¿
+¿¿¿¿¿¿ ¿¿::  
+¿¿¿$this->  ¿¿¿
 
-phpÒì³£´¦Àí
+php¿¿¿¿
 set_error_handler
 error_function()
 
 function my_error($errno,$errme){
-	echo "´íÎóÐÅÏ¢".$errme;
+	echo "¿¿¿¿".$errme;
 	exit();
 }
 set_error_handler("my_error",E_WARNING);
 
-´íÎó´¥·¢trigger_error(error_msg,E_USER_WARNING);
+¿¿¿¿trigger_error(error_msg,E_USER_WARNING);
 E_ERROR
 E_WARNING
 E_NOTICE
@@ -949,22 +1005,24 @@ E_USER_WARNING
 E_USER_NOTICE
 
 error_log
-´Ëº¯Êý»áËÍ³ö´íÎóÐÅÏ¢µ½ Web ·þÎñÆ÷µÄ´íÎó log ÎÄ¼þ£¬TCP Port£¬»òµ½Ö¸¶¨ÎÄ¼þ¡£
-µÚÒ»¸ö²ÎÊý message ¼´ÎªÒªËÍ³öµÄ´íÎóÐÅÏ¢¡£
-µÚ¶þ¸ö²ÎÊý message_type ÎªÕûÊýÖµ£º
-       0 ±íÊ¾ËÍµ½²Ù×÷ÏµÍ³µÄ log (UNIX ÔÚ syslog¡¢Windows NT ¼ÇÂ¼µ½ÊÂ¼þ¼ÇÂ¼)£»
-       1 ÔòÊ¹ÓÃ PHP µÄ Mail() º¯Êý£¬ËÍÐÅÏ¢µ½Ä³ E-Mail ´¦£¬µÚËÄ¸ö²ÎÊý extra_headers Òà»áÓÃµ½£»
-       2 Ôò½«´íÎóÐÅÏ¢ËÍµ½ TCP ²º£¬´ËÊ±µÚÈý¸ö²ÎÊý destination ±íÊ¾Ä¿µÄµØ IP ¼° Port£»
-       3 Ôò½«ÐÅÏ¢´æµ½ÎÄ¼þ destination ÖÐ
+¿¿¿¿¿¿¿¿¿¿¿ Web ¿¿¿¿¿¿ log ¿¿¿TCP Port¿¿¿¿¿¿¿¿
+¿¿¿¿¿ message ¿¿¿¿¿¿¿¿¿¿¿
+¿¿¿¿¿ message_type ¿¿¿¿¿
+       0 ¿¿¿¿¿¿¿¿¿ log (UNIX ¿ syslog¿Windows NT ¿¿¿¿¿¿¿)¿
+       1 ¿¿¿ PHP ¿ Mail() ¿¿¿¿¿¿¿¿ E-Mail ¿¿¿¿¿¿¿
+extra_headers ¿¿¿¿¿
+       2 ¿¿¿¿¿¿¿¿ TCP ¿¿¿¿¿¿¿¿¿ destination ¿¿¿¿¿ IP ¿
+Port¿
+       3 ¿¿¿¿¿¿¿¿ destination ¿
 if (!Ora_Logon($username, $password)) {
-  error_log("Oracle Êý¾Ý¿â²»¿ÉÓÃ!", 0);
+  error_log("Oracle ¿¿¿¿¿¿!", 0);
 }
 if (!($foo = allocate_new_foo()) {
-  error_log("³öÏÖ´óÂé·³ÁË!", 1, "webmaster@www.mydomain.com.tw");
+  error_log("¿¿¿¿¿¿!", 1, "webmaster@www.mydomain.com.tw");
 }
-error_log("¸ãÔÒÁË!", 2, "127.0.0.1:7000");
-error_log("¸ãÔÒÁË!", 2, "loghost");
-error_log("¸ãÔÒÁË!", 3, "/var/tmp/my-errors.log");
+error_log("¿¿¿!", 2, "127.0.0.1:7000");
+error_log("¿¿¿!", 2, "loghost");
+error_log("¿¿¿!", 3, "/var/tmp/my-errors.log");
 
 try{
 
@@ -972,10 +1030,10 @@ try{
 	echo $e->getMessage().$e->getLine();
 }
 
-Å×³öÒì³£Ö®ºó£¬tryÖÐÏÂÃæµÄ´úÂë²»»áÖ´ÐÐ¡£Ö±½ÓÈ¥ÕÒcatch¡£Ã»ÓÐÒì³£Ê±£¬Ôò²»Ö´ÐÐcatch¿é¡£²¶»ñµÄÒì³££¬¿ÉÒÔÔÙÅ×³ö£¬Å×³öµÄÒì³£±ØÐë²¶»ñ,»ò¶¨ÒåÒ»¸ö¶¥¼¶´¦ÀíÆ÷
+¿¿¿¿¿¿¿try¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿catch¿¿¿¿¿¿¿¿¿¿¿catch¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿,¿¿¿¿¿¿¿¿¿¿
 set_exception_handler();
 
-×Ô¶¨ÒåÒì³£Àà
+¿¿¿¿¿¿
 class Exception1 extends Exception{
 }
 
@@ -984,5 +1042,7 @@ try{
 }catch(Exception2){
 }
 
-<br/>ÍøÒ³ÐÐ
-\n ÎÄ¼þ»»ÐÐ
+<br/>¿¿¿
+\n ¿¿¿¿
+
+date;dd if=/dev/zero of=/root/testfile bs=1k count=100000;date
